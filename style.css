@@ -165,30 +165,29 @@ footer {
   margin-top: 0.6rem;
 }
 
-.share-links a {
-  display: inline-block;
+.share-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.4rem;
   border: 1px solid #000000;
-  padding: 0.35rem 0.7rem;
-  color: #000000;
-  text-decoration: none;
-  font-size: 0.92rem;
-}
-
-.share-links a:hover,
-.share-links .share-copy:hover {
-  background: #000000;
-  color: #ffffff;
-}
-
-.share-links .share-copy {
-  display: inline-block;
-  border: 1px solid #000000;
-  padding: 0.35rem 0.7rem;
+  padding: 0.35rem 0.85rem;
   color: #000000;
   background: #ffffff;
-  font: inherit;
+  text-decoration: none;
+  line-height: 1.2;
   font-size: 0.92rem;
+  font-family: inherit;
+  white-space: nowrap;
   cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.share-action:hover,
+.share-action:focus-visible {
+  background: #000000;
+  color: #ffffff;
+  outline: none;
 }
 
 .share-copy-feedback {
