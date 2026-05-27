@@ -1,2 +1,2 @@
-// Substitua G-XXXXXXXXXX pelo ID real do Google Analytics 4.
-window.BLOG_GA_ID = "G-XXXXXXXXXX";
+// Token do Cloudflare Web Analytics (painel Cloudflare → Web Analytics → seu site).
+window.CF_ANALYTICS_TOKEN = "COLE_SEU_TOKEN_AQUI";

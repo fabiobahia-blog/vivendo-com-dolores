@@ -67,32 +67,33 @@ Depois do comando:
 1. Edite o conteúdo do arquivo criado.
 2. Adicione o link do novo post em `index.html`.
 
-## Google Analytics (GA4)
+## Cloudflare Web Analytics
 
-### 1. Criar propriedade
+### 1. Criar site no Cloudflare
 
-1. Acesse [Google Analytics](https://analytics.google.com/).
-2. Crie uma propriedade **GA4** para o site.
-3. Adicione um fluxo de dados **Web** com a URL:
-   `https://fabiobahia-blog.github.io/vivendo-com-dolores/`
-4. Copie o **Measurement ID** (formato `G-XXXXXXXXXX`).
+1. Acesse [dash.cloudflare.com](https://dash.cloudflare.com/) e crie uma conta (grátis).
+2. Vá em **Web Analytics** → **Add a site**.
+3. Informe a URL: `https://fabiobahia-blog.github.io/vivendo-com-dolores/`
+4. Copie o **token** do snippet (campo `token` dentro de `data-cf-beacon`).
+
+Não é obrigatório mudar o DNS do domínio para GitHub Pages — basta o script no site.
 
 ### 2. Configurar no blog
 
-Edite `analytics.config.js` na raiz do projeto:
+Edite `analytics.config.js`:
 
 ```js
-window.BLOG_GA_ID = "G-SEU-ID-AQUI";
+window.CF_ANALYTICS_TOKEN = "seu-token-aqui";
 ```
 
-Faça commit e push. O script só carrega quando o ID é válido (não pode ficar com `XXXX`).
+Faça commit e push. O script só carrega quando o token for válido (não pode ficar com `COLE_SEU_TOKEN_AQUI`).
 
 ### 3. Ver métricas
 
-No painel GA4: **Relatórios** → **Aquisição** / **Engajamento** → **Páginas e telas**.
+No painel Cloudflare: **Web Analytics** → selecione o site.
 
-Métricas disponíveis: visitas, usuários, páginas mais vistas, origem do tráfego, país e dispositivo.
+Métricas: visitas, páginas vistas, referência, país, dispositivo e navegador.
 
-### Privacidade (LGPD)
+### Privacidade
 
-O GA4 usa cookies de medição. Considere mencionar isso na página **Sobre** ou no rodapé.
+O Cloudflare Web Analytics não usa cookies de publicidade e é mais leve em relação à privacidade que o GA4.
