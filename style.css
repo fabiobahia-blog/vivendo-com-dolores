@@ -180,14 +180,22 @@ footer {
   font-family: inherit;
   white-space: nowrap;
   cursor: pointer;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .share-action:hover,
-.share-action:focus-visible {
+.share-action:focus-visible,
+.share-action:active {
   background: #000000;
   color: #ffffff;
   outline: none;
+}
+
+.share-action:visited {
+  color: #000000;
 }
 
 .share-copy-feedback {

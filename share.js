@@ -63,15 +63,17 @@
 
   const copyBtn = section.querySelector('[data-share="copy"]');
   if (copyBtn) {
-    copyBtn.addEventListener("click", function () {
+    copyBtn.addEventListener("click", function (event) {
       copyUrl("Link copiado!");
+      event.currentTarget.blur();
     });
   }
 
   const instagramBtn = section.querySelector('[data-share="instagram"]');
   if (instagramBtn) {
-    instagramBtn.addEventListener("click", function () {
+    instagramBtn.addEventListener("click", function (event) {
       copyUrl("Link copiado! Cole no Instagram (Stories, DM ou bio).");
+      event.currentTarget.blur();
     });
   }
 })();
