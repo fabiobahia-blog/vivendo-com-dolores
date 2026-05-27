@@ -6,7 +6,7 @@ Blog simples, gratuito e com controle total do conteúdo.
 
 - `index.html` - Página inicial com lista de posts
 - `sobre.html` - Apresentação
-- `post-1.html` - Primeiro post
+- `como-tudo-comecou/index.html` - Primeiro post com URL amigável
 - `style.css` - Estilo minimalista (fundo branco e letras pretas)
 - `.env` - Credenciais locais (editável, não vai para o GitHub)
 - `config.local.json` - Mesmas informações em JSON (editável, não vai para o GitHub)
@@ -45,7 +45,8 @@ Os arquivos `.env` e `config.local.json` estão no `.gitignore` e **nunca devem 
 
 ## Editar conteúdo
 
-- Para criar novo post, duplique `post-1.html` e ajuste:
+- Para criar novo post, crie uma pasta com slug (exemplo `meu-novo-post/`) e um `index.html` dentro.
+- Depois ajuste:
   - título da página (`<title>`)
   - título do post (`<h2>`)
   - data e texto
