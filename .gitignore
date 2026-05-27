@@ -1,0 +1,6 @@
+# Credenciais e configuração local — nunca enviar ao GitHub
+.env
+config.local.json
+
+# Sistema
+.DS_Store

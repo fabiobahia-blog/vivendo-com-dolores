@@ -1,0 +1,13 @@
+{
+  "github": {
+    "email": "seu-email@exemplo.com",
+    "username": "seu-usuario-github",
+    "repo": "nome-do-repositorio",
+    "token": "",
+    "password": ""
+  },
+  "blog": {
+    "title": "Vivendo Entre Dores",
+    "subtitle": "Minha experiência com dor crônica e trombose porto-mesentérica"
+  }
+}
