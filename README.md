@@ -66,3 +66,33 @@ Depois do comando:
 
 1. Edite o conteúdo do arquivo criado.
 2. Adicione o link do novo post em `index.html`.
+
+## Google Analytics (GA4)
+
+### 1. Criar propriedade
+
+1. Acesse [Google Analytics](https://analytics.google.com/).
+2. Crie uma propriedade **GA4** para o site.
+3. Adicione um fluxo de dados **Web** com a URL:
+   `https://fabiobahia-blog.github.io/vivendo-com-dolores/`
+4. Copie o **Measurement ID** (formato `G-XXXXXXXXXX`).
+
+### 2. Configurar no blog
+
+Edite `analytics.config.js` na raiz do projeto:
+
+```js
+window.BLOG_GA_ID = "G-SEU-ID-AQUI";
+```
+
+Faça commit e push. O script só carrega quando o ID é válido (não pode ficar com `XXXX`).
+
+### 3. Ver métricas
+
+No painel GA4: **Relatórios** → **Aquisição** / **Engajamento** → **Páginas e telas**.
+
+Métricas disponíveis: visitas, usuários, páginas mais vistas, origem do tráfego, país e dispositivo.
+
+### Privacidade (LGPD)
+
+O GA4 usa cookies de medição. Considere mencionar isso na página **Sobre** ou no rodapé.
