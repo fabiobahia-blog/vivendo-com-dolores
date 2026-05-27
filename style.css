@@ -151,3 +151,30 @@ footer {
   height: 1px;
   overflow: hidden;
 }
+
+.share-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dcdcdc;
+}
+
+.share-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.share-links a {
+  display: inline-block;
+  border: 1px solid #000000;
+  padding: 0.35rem 0.7rem;
+  color: #000000;
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.share-links a:hover {
+  background: #000000;
+  color: #ffffff;
+}
