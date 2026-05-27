@@ -7,6 +7,7 @@ Blog simples, gratuito e com controle total do conteúdo.
 - `index.html` - Página inicial com lista de posts
 - `sobre.html` - Apresentação
 - `como-tudo-comecou/index.html` - Primeiro post com URL amigável
+- `mural.html` - Mural de recados dos visitantes
 - `style.css` - Estilo minimalista (fundo branco e letras pretas)
 - `.env` - Credenciais locais (editável, não vai para o GitHub)
 - `config.local.json` - Mesmas informações em JSON (editável, não vai para o GitHub)
@@ -105,3 +106,9 @@ Métricas: visitas, páginas vistas, referência, país, dispositivo e navegador
 ### Privacidade
 
 O Cloudflare Web Analytics não usa cookies de publicidade e é mais leve em relação à privacidade que o GA4.
+
+## Mural de Recados
+
+Página: `mural.html` — visitantes deixam **Nome** (obrigatório) e **Recado** (texto).
+
+Para salvar e exibir recados publicamente, configure o Supabase (grátis): veja [docs/MURAL-SETUP.md](docs/MURAL-SETUP.md).

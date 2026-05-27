@@ -203,3 +203,73 @@ footer {
   font-size: 0.9rem;
   min-height: 1.4rem;
 }
+
+.mural-setup {
+  border: 1px solid #000000;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.mural-board {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dcdcdc;
+}
+
+.mural-board h3 {
+  margin: 0 0 1rem;
+}
+
+.mural-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mural-card {
+  border: 1px solid #000000;
+  padding: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.mural-card-name {
+  margin: 0 0 0.4rem;
+  font-weight: bold;
+}
+
+.mural-card-text {
+  margin: 0 0 0.6rem;
+  white-space: pre-wrap;
+}
+
+.mural-card-date {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.mural-empty {
+  color: #333333;
+  font-size: 0.95rem;
+}
+
+.mural-submit {
+  margin-top: 0.5rem;
+  border: 1px solid #000000;
+  background: #000000;
+  color: #ffffff;
+  padding: 0.7rem 1rem;
+  font: inherit;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.mural-submit:hover,
+.mural-submit:focus-visible {
+  opacity: 0.9;
+  outline: none;
+}
+
+.mural-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
