@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../style.css" />
     <script src="../analytics.config.js"></script>
     <script src="../analytics.js" defer></script>
+    <script src="../mural.config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="../reactions.js" defer></script>
     <script src="../share.js" defer></script>
   </head>
   <body>
@@ -47,6 +50,12 @@
             Se você está passando por algo parecido, espero que este blog te
             faça sentir menos sozinho.
           </p>
+
+          <section class="reactions-section" data-reactions data-post-slug="como-tudo-comecou">
+            <h3>Reações</h3>
+            <div class="reactions-bar" role="group" aria-label="Reações ao post"></div>
+            <p class="reactions-note" hidden>Reações em configuração.</p>
+          </section>
 
           <section class="share-section" data-share-section>
             <h3>Compartilhar este post</h3>

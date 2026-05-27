@@ -273,3 +273,63 @@ footer {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+.reactions-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dcdcdc;
+}
+
+.reactions-section h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.reactions-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.reaction-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid #000000;
+  background: #ffffff;
+  color: #000000;
+  padding: 0.4rem 0.65rem;
+  font: inherit;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.reaction-btn:hover,
+.reaction-btn:focus-visible {
+  background: #000000;
+  color: #ffffff;
+  outline: none;
+}
+
+.reaction-btn.is-active {
+  background: #000000;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.reaction-emoji {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.reaction-count {
+  font-size: 0.85rem;
+  min-width: 1ch;
+}
+
+.reactions-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.88rem;
+  color: #333333;
+}

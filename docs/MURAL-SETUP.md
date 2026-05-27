@@ -70,3 +70,7 @@ git push
 ```
 
 O mural passa a listar e receber recados em tempo real.
+
+## Reações nos posts (emoji estilo Facebook)
+
+Execute também o SQL em [REACTIONS-SETUP.sql](REACTIONS-SETUP.sql) no **SQL Editor**.
