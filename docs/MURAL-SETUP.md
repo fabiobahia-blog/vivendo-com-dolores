@@ -31,16 +31,37 @@ create policy "Visitantes podem enviar recados"
   );
 ```
 
-## 3. Copiar credenciais
+## 3. Variáveis de ambiente (`.env`)
 
-**Project Settings** → **API**:
+Na raiz do projeto, edite `.env` (copie de `.env.example` se não existir):
 
-- **Project URL** → `MURAL_SUPABASE_URL`
-- **anon public** key → `MURAL_SUPABASE_ANON_KEY`
+```bash
+SUPABASE_DB_PASSWORD=sua-senha-do-banco
+SUPABASE_API_URL=https://gduyitvnnyuewwbebeyq.supabase.co/rest/v1/
+SUPABASE_PROJECT_URL=https://gduyitvnnyuewwbebeyq.supabase.co
+MURAL_SUPABASE_URL=https://gduyitvnnyuewwbebeyq.supabase.co
+MURAL_SUPABASE_ANON_KEY=sb_publishable_...   # Settings → API Keys → Publishable key
+```
 
-Edite `mural.config.js` na raiz do blog com esses valores.
+| Variável | Onde achar no Supabase |
+|----------|-------------------------|
+| `SUPABASE_DB_PASSWORD` | Senha definida ao criar o projeto (não aparece na tela de API) |
+| `SUPABASE_API_URL` | Integrations → **Data API** → URL (`.../rest/v1/`) |
+| `MURAL_SUPABASE_URL` | Mesma base, **sem** `/rest/v1/` → `https://gduyitvnnyuewwbebeyq.supabase.co` |
+| `MURAL_SUPABASE_ANON_KEY` | Settings → **API Keys** → **Publishable key** |
 
-## 4. Publicar
+A senha do banco **não** vai no site — só no `.env` local (administração).
+
+## 4. Sincronizar com o site
+
+```bash
+chmod +x scripts/sync-mural-config.sh
+./scripts/sync-mural-config.sh
+```
+
+Isso grava URL + chave publishable em `mural.config.js`.
+
+## 5. Publicar
 
 ```bash
 git add mural.config.js
