@@ -45,9 +45,24 @@ Os arquivos `.env` e `config.local.json` estão no `.gitignore` e **nunca devem 
 
 ## Editar conteúdo
 
-- Para criar novo post, crie uma pasta com slug (exemplo `meu-novo-post/`) e um `index.html` dentro.
-- Depois ajuste:
-  - título da página (`<title>`)
-  - título do post (`<h2>`)
-  - data e texto
-- Depois adicione o link do novo post em `index.html`.
+### Padrão de posts
+
+- Todo post novo segue o formato: `slug-do-post/index.html`
+- Modelo base: `templates/post-template.html`
+
+### Criar post automaticamente
+
+```bash
+./scripts/new-post.sh "<slug>" "<titulo>" "<data>"
+```
+
+Exemplo:
+
+```bash
+./scripts/new-post.sh "aprendizados-no-hospital" "Aprendizados no hospital" "28 de maio de 2026"
+```
+
+Depois do comando:
+
+1. Edite o conteúdo do arquivo criado.
+2. Adicione o link do novo post em `index.html`.
