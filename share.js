@@ -20,4 +20,45 @@
     const anchor = section.querySelector('[data-share="' + key + '"]');
     if (anchor) anchor.href = href;
   });
+
+  const copyBtn = section.querySelector('[data-share="copy"]');
+  const copyFeedback = section.querySelector("[data-copy-feedback]");
+  const rawUrl = window.location.href;
+
+  if (copyBtn) {
+    copyBtn.addEventListener("click", function () {
+      function showSuccess() {
+        if (copyFeedback) {
+          copyFeedback.textContent = "Link copiado!";
+          setTimeout(function () {
+            copyFeedback.textContent = "";
+          }, 2500);
+        }
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(rawUrl).then(showSuccess).catch(fallbackCopy);
+        return;
+      }
+
+      fallbackCopy();
+
+      function fallbackCopy() {
+        const textarea = document.createElement("textarea");
+        textarea.value = rawUrl;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "absolute";
+        textarea.style.left = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand("copy");
+          showSuccess();
+        } catch (err) {
+          if (copyFeedback) copyFeedback.textContent = "Não foi possível copiar. Copie manualmente da barra de endereço.";
+        }
+        document.body.removeChild(textarea);
+      }
+    });
+  }
 })();
