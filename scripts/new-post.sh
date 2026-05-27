@@ -24,7 +24,8 @@ fi
 mkdir -p "$POST_DIR"
 cp "$TEMPLATE_PATH" "$POST_FILE"
 
-TITLE="$TITLE" DATE_STR="$DATE_STR" perl -0777 -i -pe 's/\{\{POST_TITLE\}\}/$ENV{TITLE}/g; s/\{\{POST_DATE\}\}/$ENV{DATE_STR}/g' \
+SLUG="$SLUG" TITLE="$TITLE" DATE_STR="$DATE_STR" perl -0777 -i -pe \
+  's/\{\{POST_TITLE\}\}/$ENV{TITLE}/g; s/\{\{POST_DATE\}\}/$ENV{DATE_STR}/g; s/\{\{POST_SLUG\}\}/$ENV{SLUG}/g' \
   "$POST_FILE"
 
 echo "Post criado em: $POST_FILE"
