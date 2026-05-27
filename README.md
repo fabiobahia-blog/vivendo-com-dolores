@@ -69,24 +69,32 @@ Depois do comando:
 
 ## Cloudflare Web Analytics
 
-### 1. Criar site no Cloudflare
+### Opção A — Automático (recomendado)
 
-1. Acesse [dash.cloudflare.com](https://dash.cloudflare.com/) e crie uma conta (grátis).
-2. Vá em **Web Analytics** → **Add a site**.
-3. Informe a URL: `https://fabiobahia-blog.github.io/vivendo-com-dolores/`
-4. Copie o **token** do snippet (campo `token` dentro de `data-cf-beacon`).
+1. Crie um API Token em [dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)  
+   Permissão: **Account → Account Analytics → Edit**
+2. No `.env`, adicione:
+   ```bash
+   CLOUDFLARE_API_TOKEN=seu-token
+   ```
+3. Execute:
+   ```bash
+   chmod +x scripts/setup-cloudflare-analytics.sh
+   ./scripts/setup-cloudflare-analytics.sh
+   ```
+4. Commit e push de `analytics.config.js`.
 
-Não é obrigatório mudar o DNS do domínio para GitHub Pages — basta o script no site.
+### Opção B — Manual no painel
 
-### 2. Configurar no blog
+1. Acesse [dash.cloudflare.com](https://dash.cloudflare.com/) → **Web Analytics** → **Add a site**.
+2. Host: `fabiobahia-blog.github.io` (GitHub Pages).
+3. Copie o **token** e coloque em `analytics.config.js`:
+   ```js
+   window.CF_ANALYTICS_TOKEN = "seu-token-aqui";
+   ```
+4. Commit e push.
 
-Edite `analytics.config.js`:
-
-```js
-window.CF_ANALYTICS_TOKEN = "seu-token-aqui";
-```
-
-Faça commit e push. O script só carrega quando o token for válido (não pode ficar com `COLE_SEU_TOKEN_AQUI`).
+Não é obrigatório mudar o DNS — basta o script no site.
 
 ### 3. Ver métricas
 
