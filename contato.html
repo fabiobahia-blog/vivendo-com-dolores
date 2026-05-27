@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entre em contato | Vivendo Entre Dores</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+    />
     <link rel="stylesheet" href="style.css" />
+    <script src="contact.js" defer></script>
   </head>
   <body>
     <header>
@@ -30,18 +35,52 @@
             vai abrir com a mensagem pronta.
           </p>
 
-          <form id="contactForm" class="contact-form">
-            <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" required />
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-field">
+              <label for="nome">Nome</label>
+              <input
+                id="nome"
+                name="nome"
+                type="text"
+                maxlength="80"
+                autocomplete="name"
+                required
+              />
+            </div>
 
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                maxlength="120"
+                inputmode="email"
+                autocomplete="email"
+                required
+              />
+            </div>
 
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
+            <div class="form-field">
+              <label for="mensagem">Mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="5"
+                maxlength="2000"
+                required
+              ></textarea>
+            </div>
 
-            <label id="humanLabel" for="humano">Confirme que é humano</label>
-            <input id="humano" name="humano" type="number" required />
+            <div class="form-field honeypot" aria-hidden="true">
+              <label for="website">Website</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="form-field">
+              <label id="humanLabel" for="humano">Confirme que é humano</label>
+              <input id="humano" name="humano" type="number" inputmode="numeric" required />
+            </div>
 
             <button type="submit">Enviar</button>
             <p id="feedback" class="form-feedback" aria-live="polite"></p>
@@ -56,45 +95,5 @@
       </div>
     </footer>
 
-    <script>
-      (function () {
-        const form = document.getElementById("contactForm");
-        const humanLabel = document.getElementById("humanLabel");
-        const feedback = document.getElementById("feedback");
-        const emailDestino = "fbahia@hotmail.com";
-
-        const a = Math.floor(Math.random() * 7) + 2;
-        const b = Math.floor(Math.random() * 7) + 2;
-        const resposta = a + b;
-        humanLabel.textContent = "Confirme que é humano: quanto é " + a + " + " + b + "?";
-
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const nome = document.getElementById("nome").value.trim();
-          const email = document.getElementById("email").value.trim();
-          const mensagem = document.getElementById("mensagem").value.trim();
-          const humano = Number(document.getElementById("humano").value);
-
-          if (humano !== resposta) {
-            feedback.textContent = "Confirmação de humano inválida. Tente novamente.";
-            return;
-          }
-
-          const assunto = encodeURIComponent("Contato pelo blog - " + nome);
-          const corpo = encodeURIComponent(
-            "Nome: " +
-              nome +
-              "\nEmail: " +
-              email +
-              "\n\nMensagem:\n" +
-              mensagem
-          );
-
-          window.location.href = "mailto:" + emailDestino + "?subject=" + assunto + "&body=" + corpo;
-          feedback.textContent = "Abrindo seu aplicativo de email para finalizar o envio.";
-        });
-      })();
-    </script>
   </body>
 </html>
