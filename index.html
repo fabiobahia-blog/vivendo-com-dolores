@@ -7,34 +7,42 @@
     <meta
       name="description"
       content="Relatos pessoais sobre viver com dor crônica e trombose porto-mesentérica."
+      data-i18n-content="meta.indexDesc"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="lang.js" defer></script>
     <script src="analytics.config.js"></script>
     <script src="analytics.js" defer></script>
   </head>
-  <body>
+  <body data-i18n-title="titles.index">
     <header>
       <div class="container">
-        <h1 class="site-title">Vivendo Entre Dolores</h1>
-        <p class="site-subtitle">
+        <div class="header-top">
+          <div class="lang-switcher" role="group" aria-label="Idioma">
+            <button type="button" class="lang-flag is-active" data-lang="pt-BR" aria-label="Português (Brasil)">🇧🇷</button>
+            <button type="button" class="lang-flag" data-lang="en-US" aria-label="English (US)">🇺🇸</button>
+          </div>
+        </div>
+        <h1 class="site-title" data-i18n="site.title">Vivendo Entre Dolores</h1>
+        <p class="site-subtitle" data-i18n="site.subtitle">
           Minha experiência com dor crônica e trombose porto-mesentérica
         </p>
         <nav>
-          <a href="index.html">Início</a>
-          <a href="sobre.html">Sobre mim</a>
-          <a href="mural.html">Mural de Recados</a>
-          <a href="contato.html">Contato</a>
+          <a href="index.html" data-i18n="nav.home">Início</a>
+          <a href="sobre.html" data-i18n="nav.about">Sobre mim</a>
+          <a href="mural.html" data-i18n="nav.mural">Mural de Recados</a>
+          <a href="contato.html" data-i18n="nav.contact">Contato</a>
         </nav>
       </div>
     </header>
 
     <main>
       <div class="container">
-        <h2>Posts</h2>
+        <h2 data-i18n="index.posts">Posts</h2>
         <ul class="post-list">
           <li>
-            <a href="como-tudo-comecou/">Como tudo começou</a>
-            <span class="post-meta">27 de maio de 2026</span>
+            <a href="como-tudo-comecou/" data-i18n="index.post1Title">Como tudo começou</a>
+            <span class="post-meta" data-i18n="index.post1Date">27 de maio de 2026</span>
           </li>
         </ul>
       </div>
@@ -42,7 +50,7 @@
 
     <footer>
       <div class="container">
-        <p>Feito com simplicidade para compartilhar uma jornada real.</p>
+        <p data-i18n="footer.index">Feito com simplicidade para compartilhar uma jornada real.</p>
       </div>
     </footer>
   </body>

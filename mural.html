@@ -7,26 +7,34 @@
     <meta
       name="description"
       content="Deixe um recado de apoio e leia mensagens de outras pessoas."
+      data-i18n-content="meta.muralDesc"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="lang.js" defer></script>
     <script src="analytics.config.js"></script>
     <script src="analytics.js" defer></script>
     <script src="mural.config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
     <script src="mural.js" defer></script>
   </head>
-  <body>
+  <body data-i18n-title="titles.mural">
     <header>
       <div class="container">
-        <h1 class="site-title">Vivendo Entre Dolores</h1>
-        <p class="site-subtitle">
+        <div class="header-top">
+          <div class="lang-switcher" role="group" aria-label="Idioma">
+            <button type="button" class="lang-flag is-active" data-lang="pt-BR" aria-label="Português (Brasil)">🇧🇷</button>
+            <button type="button" class="lang-flag" data-lang="en-US" aria-label="English (US)">🇺🇸</button>
+          </div>
+        </div>
+        <h1 class="site-title" data-i18n="site.title">Vivendo Entre Dolores</h1>
+        <p class="site-subtitle" data-i18n="site.subtitle">
           Minha experiência com dor crônica e trombose porto-mesentérica
         </p>
         <nav>
-          <a href="index.html">Início</a>
-          <a href="sobre.html">Sobre mim</a>
-          <a href="mural.html">Mural de Recados</a>
-          <a href="contato.html">Contato</a>
+          <a href="index.html" data-i18n="nav.home">Início</a>
+          <a href="sobre.html" data-i18n="nav.about">Sobre mim</a>
+          <a href="mural.html" data-i18n="nav.mural">Mural de Recados</a>
+          <a href="contato.html" data-i18n="nav.contact">Contato</a>
         </nav>
       </div>
     </header>
@@ -34,18 +42,18 @@
     <main>
       <div class="container">
         <article>
-          <h2>Mural de Recados</h2>
-          <p class="form-note">
+          <h2 data-i18n="mural.heading">Mural de Recados</h2>
+          <p class="form-note" data-i18n="mural.note">
             Este espaço é para mensagens de apoio, carinho e troca de experiências.
           </p>
 
-          <p id="muralSetupNote" class="mural-setup" hidden>
+          <p id="muralSetupNote" class="mural-setup" hidden data-i18n="mural.setup">
             O mural está sendo configurado. Em breve você poderá enviar recados aqui.
           </p>
 
           <form id="muralForm" class="contact-form mural-form" novalidate>
             <div class="form-field">
-              <label for="muralNome">Nome <span aria-hidden="true">*</span></label>
+              <label for="muralNome"><span data-i18n="mural.name">Nome</span> <span aria-hidden="true">*</span></label>
               <input
                 id="muralNome"
                 name="nome"
@@ -57,7 +65,7 @@
             </div>
 
             <div class="form-field">
-              <label for="muralTexto">Recado <span aria-hidden="true">*</span></label>
+              <label for="muralTexto"><span data-i18n="mural.message">Recado</span> <span aria-hidden="true">*</span></label>
               <textarea
                 id="muralTexto"
                 name="recado"
@@ -72,12 +80,12 @@
               <input id="muralWebsite" name="website" type="text" tabindex="-1" autocomplete="off" />
             </div>
 
-            <button type="submit" class="mural-submit">Publicar recado</button>
+            <button type="submit" class="mural-submit" data-i18n="mural.submit">Publicar recado</button>
             <p id="muralFeedback" class="form-feedback" aria-live="polite"></p>
           </form>
 
           <section class="mural-board" aria-labelledby="muralBoardTitle">
-            <h3 id="muralBoardTitle">Recados recentes</h3>
+            <h3 id="muralBoardTitle" data-i18n="mural.recent">Recados recentes</h3>
             <ul id="muralList" class="mural-list"></ul>
           </section>
         </article>
@@ -86,7 +94,7 @@
 
     <footer>
       <div class="container">
-        <p>Mensagens de quem passa por aqui fazem diferença.</p>
+        <p data-i18n="footer.mural">Mensagens de quem passa por aqui fazem diferença.</p>
       </div>
     </footer>
   </body>

@@ -107,6 +107,13 @@ Métricas: visitas, páginas vistas, referência, país, dispositivo e navegador
 
 O Cloudflare Web Analytics não usa cookies de publicidade e é mais leve em relação à privacidade que o GA4.
 
+## Idioma (PT-BR / EN-US)
+
+No topo de cada página: bandeiras 🇧🇷 e 🇺🇸 para alternar português e inglês.
+
+- Traduções em `locales/pt-BR.json` e `locales/en-US.json`
+- Preferência salva no navegador (`localStorage`)
+
 ## Mural de Recados
 
 Página: `mural.html` — visitantes deixam **Nome** (obrigatório) e **Recado** (texto).

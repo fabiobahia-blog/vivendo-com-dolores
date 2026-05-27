@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Como tudo começou | Vivendo Entre Dolores</title>
     <link rel="stylesheet" href="../style.css" />
+    <script src="../lang.js" defer></script>
     <script src="../analytics.config.js"></script>
     <script src="../analytics.js" defer></script>
     <script src="../mural.config.js"></script>
@@ -12,18 +13,24 @@
     <script src="../reactions.js" defer></script>
     <script src="../share.js" defer></script>
   </head>
-  <body>
+  <body data-i18n-title="titles.postComoTudoComecou">
     <header>
       <div class="container">
-        <h1 class="site-title">Vivendo Entre Dolores</h1>
-        <p class="site-subtitle">
+        <div class="header-top">
+          <div class="lang-switcher" role="group" aria-label="Idioma">
+            <button type="button" class="lang-flag is-active" data-lang="pt-BR" aria-label="Português (Brasil)">🇧🇷</button>
+            <button type="button" class="lang-flag" data-lang="en-US" aria-label="English (US)">🇺🇸</button>
+          </div>
+        </div>
+        <h1 class="site-title" data-i18n="site.title">Vivendo Entre Dolores</h1>
+        <p class="site-subtitle" data-i18n="site.subtitle">
           Minha experiência com dor crônica e trombose porto-mesentérica
         </p>
         <nav>
-          <a href="../index.html">Início</a>
-          <a href="../sobre.html">Sobre mim</a>
-          <a href="../mural.html">Mural de Recados</a>
-          <a href="../contato.html">Contato</a>
+          <a href="../index.html" data-i18n="nav.home">Início</a>
+          <a href="../sobre.html" data-i18n="nav.about">Sobre mim</a>
+          <a href="../mural.html" data-i18n="nav.mural">Mural de Recados</a>
+          <a href="../contato.html" data-i18n="nav.contact">Contato</a>
         </nav>
       </div>
     </header>
@@ -31,42 +38,42 @@
     <main>
       <div class="container">
         <article>
-          <h2>Como tudo começou</h2>
-          <p class="post-meta">Publicado em 27 de maio de 2026</p>
+          <h2 data-i18n="posts.como-tudo-comecou.title">Como tudo começou</h2>
+          <p class="post-meta" data-i18n="posts.como-tudo-comecou.date">Publicado em 27 de maio de 2026</p>
 
-          <p>
+          <p data-i18n="posts.como-tudo-comecou.p1">
             Este é o primeiro texto do blog e também o início de uma conversa
             que eu queria ter há muito tempo.
           </p>
-          <p>
+          <p data-i18n="posts.como-tudo-comecou.p2">
             Viver com dor crônica e com trombose porto-mesentérica mudou minha
             rotina, meu corpo e minha forma de enxergar o tempo.
           </p>
-          <p>
+          <p data-i18n="posts.como-tudo-comecou.p3">
             Neste espaço, quero contar essa jornada com honestidade: os dias
             bons, os dias difíceis, os medos e as pequenas vitórias.
           </p>
-          <p>
+          <p data-i18n="posts.como-tudo-comecou.p4">
             Se você está passando por algo parecido, espero que este blog te
             faça sentir menos sozinho.
           </p>
 
           <section class="reactions-section" data-reactions data-post-slug="como-tudo-comecou">
-            <h3>Reações</h3>
+            <h3 data-i18n="reactions.title">Reações</h3>
             <div class="reactions-bar" role="group" aria-label="Reações ao post"></div>
-            <p class="reactions-note" hidden>Reações em configuração.</p>
+            <p class="reactions-note" hidden data-i18n="reactions.configuring">Reações em configuração.</p>
           </section>
 
           <section class="share-section" data-share-section>
-            <h3>Compartilhar este post</h3>
+            <h3 data-i18n="share.title">Compartilhar este post</h3>
             <div class="share-links">
-              <a class="share-action" data-share="whatsapp" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-              <a class="share-action" data-share="x" href="#" target="_blank" rel="noopener noreferrer">X/Twitter</a>
-              <a class="share-action" data-share="facebook" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
-              <a class="share-action" data-share="linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <button type="button" class="share-action" data-share="instagram">Instagram</button>
-              <a class="share-action" data-share="email" href="#">Email</a>
-              <button type="button" class="share-action" data-share="copy">Copiar link</button>
+              <a class="share-action" data-share="whatsapp" href="#" target="_blank" rel="noopener noreferrer" data-i18n="share.whatsapp">WhatsApp</a>
+              <a class="share-action" data-share="x" href="#" target="_blank" rel="noopener noreferrer" data-i18n="share.x">X/Twitter</a>
+              <a class="share-action" data-share="facebook" href="#" target="_blank" rel="noopener noreferrer" data-i18n="share.facebook">Facebook</a>
+              <a class="share-action" data-share="linkedin" href="#" target="_blank" rel="noopener noreferrer" data-i18n="share.linkedin">LinkedIn</a>
+              <button type="button" class="share-action" data-share="instagram" data-i18n="share.instagram">Instagram</button>
+              <a class="share-action" data-share="email" href="#" data-i18n="share.email">Email</a>
+              <button type="button" class="share-action" data-share="copy" data-i18n="share.copy">Copiar link</button>
             </div>
             <p class="share-copy-feedback" data-copy-feedback aria-live="polite"></p>
           </section>
@@ -76,7 +83,7 @@
 
     <footer>
       <div class="container">
-        <p>Compartilhar também é uma forma de cuidado.</p>
+        <p data-i18n="footer.post">Compartilhar também é uma forma de cuidado.</p>
       </div>
     </footer>
   </body>

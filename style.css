@@ -20,6 +20,39 @@ header {
   padding: 2rem 0 1rem;
 }
 
+.header-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.75rem;
+}
+
+.lang-switcher {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.lang-flag {
+  border: 1px solid #000000;
+  background: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.25rem 0.45rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.lang-flag:hover,
+.lang-flag:focus-visible {
+  background: #000000;
+  outline: none;
+  transform: scale(1.05);
+}
+
+.lang-flag.is-active {
+  background: #000000;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
 h1,
 h2,
 h3 {

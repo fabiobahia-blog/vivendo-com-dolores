@@ -13,7 +13,20 @@
   const a = Math.floor(Math.random() * 7) + 2;
   const b = Math.floor(Math.random() * 7) + 2;
   const resposta = a + b;
-  humanLabel.textContent = "Confirme que é humano: quanto é " + a + " + " + b + "?";
+
+  function t(key) {
+    if (window.BlogI18n && window.BlogI18n.t) {
+      return window.BlogI18n.t(key, { a: a, b: b });
+    }
+    return key;
+  }
+
+  function updateHumanLabel() {
+    if (humanLabel) humanLabel.textContent = t("contact.human");
+  }
+
+  updateHumanLabel();
+  document.addEventListener("bloglangchange", updateHumanLabel);
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -32,27 +45,27 @@
     feedback.textContent = "";
 
     if (websiteInput.value.trim() !== "") {
-      feedback.textContent = "Não foi possível validar o envio.";
+      feedback.textContent = t("contact.feedbackBot");
       return;
     }
 
     if (Date.now() - startedAt < 1500) {
-      feedback.textContent = "Aguarde um instante e tente novamente.";
+      feedback.textContent = t("contact.feedbackFast");
       return;
     }
 
     if (!nome || !email || !mensagem) {
-      feedback.textContent = "Preencha todos os campos obrigatórios.";
+      feedback.textContent = t("contact.feedbackRequired");
       return;
     }
 
     if (!emailRegex.test(email)) {
-      feedback.textContent = "Digite um email válido (exemplo@dominio.com).";
+      feedback.textContent = t("contact.feedbackEmail");
       return;
     }
 
     if (humano !== resposta) {
-      feedback.textContent = "Confirmação de humano inválida. Tente novamente.";
+      feedback.textContent = t("contact.feedbackHuman");
       return;
     }
 
@@ -62,6 +75,6 @@
     );
 
     window.location.href = "mailto:" + emailDestino + "?subject=" + assunto + "&body=" + corpo;
-    feedback.textContent = "Abrindo seu aplicativo de email para finalizar o envio.";
+    feedback.textContent = t("contact.feedbackOk");
   });
 })();

@@ -1,0 +1,112 @@
+{
+  "site": {
+    "title": "Vivendo Entre Dolores",
+    "subtitle": "Minha experiência com dor crônica e trombose porto-mesentérica"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre mim",
+    "mural": "Mural de Recados",
+    "contact": "Contato"
+  },
+  "lang": {
+    "label": "Idioma",
+    "pt": "Português (Brasil)",
+    "en": "English (US)"
+  },
+  "footer": {
+    "index": "Feito com simplicidade para compartilhar uma jornada real.",
+    "about": "Obrigado por visitar e acompanhar essa jornada.",
+    "contact": "Sua mensagem é importante para mim.",
+    "mural": "Mensagens de quem passa por aqui fazem diferença.",
+    "post": "Compartilhar também é uma forma de cuidado."
+  },
+  "meta": {
+    "indexDesc": "Relatos pessoais sobre viver com dor crônica e trombose porto-mesentérica.",
+    "muralDesc": "Deixe um recado de apoio e leia mensagens de outras pessoas."
+  },
+  "titles": {
+    "index": "Vivendo Entre Dolores",
+    "about": "Sobre mim | Vivendo Entre Dolores",
+    "contact": "Entre em contato | Vivendo Entre Dolores",
+    "mural": "Mural de Recados | Vivendo Entre Dolores",
+    "postComoTudoComecou": "Como tudo começou | Vivendo Entre Dolores"
+  },
+  "index": {
+    "posts": "Posts",
+    "post1Title": "Como tudo começou",
+    "post1Date": "27 de maio de 2026"
+  },
+  "about": {
+    "heading": "Sobre mim",
+    "p1": "Criei este blog para registrar minha vivência com dor crônica e com a trombose porto-mesentérica.",
+    "p2": "Meu objetivo é transformar uma experiência difícil em informação, acolhimento e troca com outras pessoas que também vivem desafios de saúde.",
+    "p3": "Aqui vou compartilhar relatos reais, aprendizados do dia a dia e reflexões sobre cuidado, limites e esperança."
+  },
+  "contact": {
+    "heading": "Entre em contato",
+    "note": "Preencha o formulário abaixo. Ao enviar, o seu aplicativo de email vai abrir com a mensagem pronta.",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "human": "Confirme que é humano: quanto é {a} + {b}?",
+    "submit": "Enviar",
+    "feedbackRequired": "Preencha todos os campos obrigatórios.",
+    "feedbackEmail": "Digite um email válido (exemplo@dominio.com).",
+    "feedbackHuman": "Confirmação de humano inválida. Tente novamente.",
+    "feedbackBot": "Não foi possível validar o envio.",
+    "feedbackFast": "Aguarde um instante e tente novamente.",
+    "feedbackOk": "Abrindo seu aplicativo de email para finalizar o envio."
+  },
+  "mural": {
+    "heading": "Mural de Recados",
+    "note": "Este espaço é para mensagens de apoio, carinho e troca de experiências.",
+    "setup": "O mural está sendo configurado. Em breve você poderá enviar recados aqui.",
+    "name": "Nome",
+    "message": "Recado",
+    "submit": "Publicar recado",
+    "recent": "Recados recentes",
+    "empty": "Seja o primeiro a deixar um recado.",
+    "configuring": "Mural em configuração. Em breve.",
+    "sending": "Enviando...",
+    "published": "Recado publicado. Obrigado!",
+    "errorSend": "Não foi possível enviar. Tente novamente.",
+    "errorLoad": "Não foi possível carregar os recados agora.",
+    "nameRequired": "Informe seu nome.",
+    "messageRequired": "Escreva um recado com pelo menos 3 caracteres."
+  },
+  "reactions": {
+    "title": "Reações",
+    "configuring": "Reações em configuração.",
+    "errorLoad": "Não foi possível carregar as reações.",
+    "like": "Curtir",
+    "love": "Amei",
+    "haha": "Haha",
+    "wow": "Uau",
+    "sad": "Triste",
+    "angry": "Grr"
+  },
+  "share": {
+    "title": "Compartilhar este post",
+    "whatsapp": "WhatsApp",
+    "x": "X/Twitter",
+    "facebook": "Facebook",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "email": "Email",
+    "copy": "Copiar link",
+    "copyOk": "Link copiado!",
+    "instagramOk": "Link copiado! Cole no Instagram (Stories, DM ou bio).",
+    "shareText": "Leia este post: {title}"
+  },
+  "posts": {
+    "como-tudo-comecou": {
+      "title": "Como tudo começou",
+      "date": "Publicado em 27 de maio de 2026",
+      "p1": "Este é o primeiro texto do blog e também o início de uma conversa que eu queria ter há muito tempo.",
+      "p2": "Viver com dor crônica e com trombose porto-mesentérica mudou minha rotina, meu corpo e minha forma de enxergar o tempo.",
+      "p3": "Neste espaço, quero contar essa jornada com honestidade: os dias bons, os dias difíceis, os medos e as pequenas vitórias.",
+      "p4": "Se você está passando por algo parecido, espero que este blog te faça sentir menos sozinho."
+    }
+  }
+}

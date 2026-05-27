@@ -4,9 +4,19 @@
   const section = document.querySelector("[data-share-section]");
   if (!section) return;
 
+  function t(key, params) {
+    if (window.BlogI18n && window.BlogI18n.t) {
+      return window.BlogI18n.t(key, params);
+    }
+    return key;
+  }
+
+  function updateShareLinks() {
   const pageUrl = encodeURIComponent(window.location.href);
   const pageTitle = encodeURIComponent(document.title);
-  const text = encodeURIComponent("Leia este post: " + document.title);
+  const text = encodeURIComponent(
+    t("share.shareText", { title: document.title })
+  );
 
   const links = {
     whatsapp: "https://wa.me/?text=" + text + "%20" + pageUrl,
@@ -20,6 +30,10 @@
     const anchor = section.querySelector('[data-share="' + key + '"]');
     if (anchor) anchor.href = href;
   });
+  }
+
+  updateShareLinks();
+  document.addEventListener("bloglangchange", updateShareLinks);
 
   const copyFeedback = section.querySelector("[data-copy-feedback]");
   const rawUrl = window.location.href;
@@ -64,7 +78,7 @@
   const copyBtn = section.querySelector('[data-share="copy"]');
   if (copyBtn) {
     copyBtn.addEventListener("click", function (event) {
-      copyUrl("Link copiado!");
+      copyUrl(t("share.copyOk"));
       event.currentTarget.blur();
     });
   }
@@ -72,7 +86,7 @@
   const instagramBtn = section.querySelector('[data-share="instagram"]');
   if (instagramBtn) {
     instagramBtn.addEventListener("click", function (event) {
-      copyUrl("Link copiado! Cole no Instagram (Stories, DM ou bio).");
+      copyUrl(t("share.instagramOk"));
       event.currentTarget.blur();
     });
   }

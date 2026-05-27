@@ -1,14 +1,26 @@
 (function () {
   "use strict";
 
-  var REACTIONS = [
-    { id: "like", emoji: "👍", label: "Curtir" },
-    { id: "love", emoji: "❤️", label: "Amei" },
-    { id: "haha", emoji: "😂", label: "Haha" },
-    { id: "wow", emoji: "😮", label: "Uau" },
-    { id: "sad", emoji: "😢", label: "Triste" },
-    { id: "angry", emoji: "😠", label: "Grr" },
-  ];
+  var REACTION_IDS = ["like", "love", "haha", "wow", "sad", "angry"];
+  var REACTION_EMOJI = {
+    like: "👍",
+    love: "❤️",
+    haha: "😂",
+    wow: "😮",
+    sad: "😢",
+    angry: "😠",
+  };
+
+  function t(key) {
+    if (window.BlogI18n && window.BlogI18n.t) return window.BlogI18n.t(key);
+    return key;
+  }
+
+  function getReactions() {
+    return REACTION_IDS.map(function (id) {
+      return { id: id, emoji: REACTION_EMOJI[id], label: t("reactions." + id) };
+    });
+  }
 
   var section = document.querySelector("[data-reactions]");
   if (!section) return;
@@ -61,7 +73,7 @@
     var bar = section.querySelector(".reactions-bar");
     if (!bar) return;
 
-    bar.innerHTML = REACTIONS.map(function (r) {
+    bar.innerHTML = getReactions().map(function (r) {
       var count = counts[r.id] || 0;
       var active = activeId === r.id ? " is-active" : "";
       return (
@@ -87,8 +99,8 @@
 
   function aggregateCounts(rows) {
     var counts = {};
-    REACTIONS.forEach(function (r) {
-      counts[r.id] = 0;
+    REACTION_IDS.forEach(function (id) {
+      counts[id] = 0;
     });
     rows.forEach(function (row) {
       if (counts[row.reaction] !== undefined) {
@@ -125,8 +137,7 @@
         bindButtons();
       })
       .catch(function () {
-        section.querySelector(".reactions-note").textContent =
-          "Não foi possível carregar as reações.";
+        section.querySelector(".reactions-note").textContent = t("reactions.errorLoad");
         section.querySelector(".reactions-note").hidden = false;
       });
   }
@@ -171,4 +182,5 @@
   }
 
   refresh();
+  document.addEventListener("bloglangchange", refresh);
 })();

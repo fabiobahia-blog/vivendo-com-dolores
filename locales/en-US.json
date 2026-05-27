@@ -1,0 +1,112 @@
+{
+  "site": {
+    "title": "Living Between Pains",
+    "subtitle": "My experience living with chronic pain and porto-mesenteric thrombosis"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About me",
+    "mural": "Message Board",
+    "contact": "Contact"
+  },
+  "lang": {
+    "label": "Language",
+    "pt": "Português (Brasil)",
+    "en": "English (US)"
+  },
+  "footer": {
+    "index": "Built simply to share a real journey.",
+    "about": "Thank you for visiting and following this journey.",
+    "contact": "Your message matters to me.",
+    "mural": "Messages from visitors make a difference.",
+    "post": "Sharing is also a form of care."
+  },
+  "meta": {
+    "indexDesc": "Personal stories about living with chronic pain and porto-mesenteric thrombosis.",
+    "muralDesc": "Leave a supportive message and read notes from others."
+  },
+  "titles": {
+    "index": "Living Between Pains",
+    "about": "About me | Living Between Pains",
+    "contact": "Contact | Living Between Pains",
+    "mural": "Message Board | Living Between Pains",
+    "postComoTudoComecou": "How it all began | Living Between Pains"
+  },
+  "index": {
+    "posts": "Posts",
+    "post1Title": "How it all began",
+    "post1Date": "May 27, 2026"
+  },
+  "about": {
+    "heading": "About me",
+    "p1": "I created this blog to document my experience with chronic pain and porto-mesenteric thrombosis.",
+    "p2": "My goal is to turn a difficult experience into information, support, and connection with others facing health challenges.",
+    "p3": "Here I will share real stories, everyday lessons, and reflections on care, limits, and hope."
+  },
+  "contact": {
+    "heading": "Contact me",
+    "note": "Fill out the form below. When you submit, your email app will open with the message ready.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "human": "Confirm you are human: what is {a} + {b}?",
+    "submit": "Send",
+    "feedbackRequired": "Please fill in all required fields.",
+    "feedbackEmail": "Enter a valid email (example@domain.com).",
+    "feedbackHuman": "Human verification failed. Try again.",
+    "feedbackBot": "Could not validate submission.",
+    "feedbackFast": "Please wait a moment and try again.",
+    "feedbackOk": "Opening your email app to finish sending."
+  },
+  "mural": {
+    "heading": "Message Board",
+    "note": "This space is for support, kindness, and sharing experiences.",
+    "setup": "The board is being set up. You will be able to post messages here soon.",
+    "name": "Name",
+    "message": "Message",
+    "submit": "Post message",
+    "recent": "Recent messages",
+    "empty": "Be the first to leave a message.",
+    "configuring": "Board is being configured. Coming soon.",
+    "sending": "Sending...",
+    "published": "Message posted. Thank you!",
+    "errorSend": "Could not send. Please try again.",
+    "errorLoad": "Could not load messages right now.",
+    "nameRequired": "Please enter your name.",
+    "messageRequired": "Write a message with at least 3 characters."
+  },
+  "reactions": {
+    "title": "Reactions",
+    "configuring": "Reactions are being configured.",
+    "errorLoad": "Could not load reactions.",
+    "like": "Like",
+    "love": "Love",
+    "haha": "Haha",
+    "wow": "Wow",
+    "sad": "Sad",
+    "angry": "Angry"
+  },
+  "share": {
+    "title": "Share this post",
+    "whatsapp": "WhatsApp",
+    "x": "X/Twitter",
+    "facebook": "Facebook",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "email": "Email",
+    "copy": "Copy link",
+    "copyOk": "Link copied!",
+    "instagramOk": "Link copied! Paste on Instagram (Stories, DM, or bio).",
+    "shareText": "Read this post: {title}"
+  },
+  "posts": {
+    "como-tudo-comecou": {
+      "title": "How it all began",
+      "date": "Published on May 27, 2026",
+      "p1": "This is the blog's first post and the start of a conversation I wanted to have for a long time.",
+      "p2": "Living with chronic pain and porto-mesenteric thrombosis changed my routine, my body, and how I see time.",
+      "p3": "In this space, I want to tell this journey honestly: good days, hard days, fears, and small victories.",
+      "p4": "If you are going through something similar, I hope this blog helps you feel less alone."
+    }
+  }
+}

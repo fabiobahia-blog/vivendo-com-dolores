@@ -11,6 +11,11 @@
 
   if (!form || !list) return;
 
+  function t(key) {
+    if (window.BlogI18n && window.BlogI18n.t) return window.BlogI18n.t(key);
+    return key;
+  }
+
   function showFeedback(message) {
     if (feedback) feedback.textContent = message;
   }
@@ -25,7 +30,8 @@
 
   function formatDate(iso) {
     try {
-      return new Date(iso).toLocaleString("pt-BR", {
+      var locale = window.BlogI18n && window.BlogI18n.getLang() === "en-US" ? "en-US" : "pt-BR";
+      return new Date(iso).toLocaleString(locale, {
         day: "2-digit",
         month: "long",
         year: "numeric",
@@ -52,7 +58,7 @@
     form.querySelectorAll("input, textarea, button").forEach(function (el) {
       el.disabled = true;
     });
-    list.innerHTML = "<li class=\"mural-empty\">Mural em configuração. Em breve.</li>";
+    list.innerHTML = "<li class=\"mural-empty\">" + t("mural.configuring") + "</li>";
     return;
   }
 
@@ -62,7 +68,7 @@
 
   function renderRecados(rows) {
     if (!rows || rows.length === 0) {
-      list.innerHTML = "<li class=\"mural-empty\">Seja o primeiro a deixar um recado.</li>";
+      list.innerHTML = "<li class=\"mural-empty\">" + t("mural.empty") + "</li>";
       return;
     }
 
@@ -93,7 +99,7 @@
       .limit(50)
       .then(function (result) {
         if (result.error) {
-          showFeedback("Não foi possível carregar os recados agora.");
+          showFeedback(t("mural.errorLoad"));
           return;
         }
         renderRecados(result.data);
@@ -105,7 +111,7 @@
 
     var honeypot = document.getElementById("muralWebsite");
     if (honeypot && honeypot.value.trim() !== "") {
-      showFeedback("Não foi possível enviar o recado.");
+      showFeedback(t("mural.errorSend"));
       return;
     }
 
@@ -113,18 +119,18 @@
     var recado = document.getElementById("muralTexto").value.trim();
 
     if (nome.length < 2) {
-      showFeedback("Informe seu nome.");
+      showFeedback(t("mural.nameRequired"));
       return;
     }
 
     if (recado.length < 3) {
-      showFeedback("Escreva um recado com pelo menos 3 caracteres.");
+      showFeedback(t("mural.messageRequired"));
       return;
     }
 
     var submitBtn = form.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
-    showFeedback("Enviando...");
+    showFeedback(t("mural.sending"));
 
     client
       .from("recados")
@@ -132,11 +138,11 @@
       .then(function (result) {
         submitBtn.disabled = false;
         if (result.error) {
-          showFeedback("Não foi possível enviar. Tente novamente.");
+          showFeedback(t("mural.errorSend"));
           return;
         }
         form.reset();
-        showFeedback("Recado publicado. Obrigado!");
+        showFeedback(t("mural.published"));
         loadRecados();
         setTimeout(function () {
           showFeedback("");

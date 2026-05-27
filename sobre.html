@@ -5,21 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre mim | Vivendo Entre Dolores</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="lang.js" defer></script>
     <script src="analytics.config.js"></script>
     <script src="analytics.js" defer></script>
   </head>
-  <body>
+  <body data-i18n-title="titles.about">
     <header>
       <div class="container">
-        <h1 class="site-title">Vivendo Entre Dolores</h1>
-        <p class="site-subtitle">
+        <div class="header-top">
+          <div class="lang-switcher" role="group" aria-label="Idioma">
+            <button type="button" class="lang-flag is-active" data-lang="pt-BR" aria-label="Português (Brasil)">🇧🇷</button>
+            <button type="button" class="lang-flag" data-lang="en-US" aria-label="English (US)">🇺🇸</button>
+          </div>
+        </div>
+        <h1 class="site-title" data-i18n="site.title">Vivendo Entre Dolores</h1>
+        <p class="site-subtitle" data-i18n="site.subtitle">
           Minha experiência com dor crônica e trombose porto-mesentérica
         </p>
         <nav>
-          <a href="index.html">Início</a>
-          <a href="sobre.html">Sobre mim</a>
-          <a href="mural.html">Mural de Recados</a>
-          <a href="contato.html">Contato</a>
+          <a href="index.html" data-i18n="nav.home">Início</a>
+          <a href="sobre.html" data-i18n="nav.about">Sobre mim</a>
+          <a href="mural.html" data-i18n="nav.mural">Mural de Recados</a>
+          <a href="contato.html" data-i18n="nav.contact">Contato</a>
         </nav>
       </div>
     </header>
@@ -27,17 +34,17 @@
     <main>
       <div class="container">
         <article>
-          <h2>Sobre mim</h2>
-          <p>
+          <h2 data-i18n="about.heading">Sobre mim</h2>
+          <p data-i18n="about.p1">
             Criei este blog para registrar minha vivência com dor crônica e com
             a trombose porto-mesentérica.
           </p>
-          <p>
+          <p data-i18n="about.p2">
             Meu objetivo é transformar uma experiência difícil em informação,
             acolhimento e troca com outras pessoas que também vivem desafios de
             saúde.
           </p>
-          <p>
+          <p data-i18n="about.p3">
             Aqui vou compartilhar relatos reais, aprendizados do dia a dia e
             reflexões sobre cuidado, limites e esperança.
           </p>
@@ -47,7 +54,7 @@
 
     <footer>
       <div class="container">
-        <p>Obrigado por visitar e acompanhar essa jornada.</p>
+        <p data-i18n="footer.about">Obrigado por visitar e acompanhar essa jornada.</p>
       </div>
     </footer>
   </body>
