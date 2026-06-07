@@ -7,7 +7,7 @@ Blog simples, gratuito e com controle total do conteúdo.
 - `index.html` - Página inicial com lista de posts
 - `sobre.html` - Apresentação
 - `como-tudo-comecou/index.html` - Primeiro post com URL amigável
-- `mural.html` - Mural de recados dos visitantes
+- `licoes-aprendidas.html` - Lições aprendidas desta jornada
 - `style.css` - Estilo minimalista (fundo branco e letras pretas)
 - `.env` - Credenciais locais (editável, não vai para o GitHub)
 - `config.local.json` - Mesmas informações em JSON (editável, não vai para o GitHub)
@@ -118,4 +118,6 @@ No topo de cada página: bandeiras 🇧🇷 e 🇺🇸 para alternar português 
 
 Página: `mural.html` — visitantes deixam **Nome** (obrigatório) e **Recado** (texto).
 
-Para salvar e exibir recados publicamente, configure o Supabase (grátis): veja [docs/MURAL-SETUP.md](docs/MURAL-SETUP.md).
+Para salvar e exibir recados e reações na nuvem, configure o Supabase (grátis): veja [docs/MURAL-SETUP.md](docs/MURAL-SETUP.md).
+
+Reações usam Supabase por padrão (`reactions.config.js`). Alternativa: [docs/REACTIONS-UPSTASH.md](docs/REACTIONS-UPSTASH.md).

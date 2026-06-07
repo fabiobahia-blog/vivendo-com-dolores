@@ -7,7 +7,8 @@
     "home": "Home",
     "about": "About me",
     "mural": "Message Board",
-    "contact": "Contact"
+    "contact": "Contact",
+    "lessons": "Lessons learned"
   },
   "lang": {
     "label": "Language",
@@ -19,17 +20,20 @@
     "about": "Thank you for visiting and following this journey.",
     "contact": "Your message matters to me.",
     "mural": "Messages from visitors make a difference.",
-    "post": "Sharing is also a form of care."
+    "post": "Sharing is also a form of care.",
+    "lessons": "Each lesson is a piece of this journey."
   },
   "meta": {
     "indexDesc": "Personal stories about living with chronic pain and porto-mesenteric thrombosis.",
-    "muralDesc": "Leave a supportive message and read notes from others."
+    "muralDesc": "Leave a supportive message and read notes from others.",
+    "lessonsDesc": "Practical lessons from living with porto-mesenteric thrombosis and chronic pain."
   },
   "titles": {
     "index": "Living Between Pains",
     "about": "About me | Living Between Pains",
     "contact": "Contact | Living Between Pains",
     "mural": "Message Board | Living Between Pains",
+    "lessons": "Lessons learned | Living Between Pains",
     "postComoTudoComecou": "How it all began | Living Between Pains",
     "postDescobriTrombose": "The day I discovered the thrombosis | Living Between Pains"
   },
@@ -45,6 +49,36 @@
     "p1": "I created this blog to document my experience with chronic pain and porto-mesenteric thrombosis.",
     "p2": "My goal is to turn a difficult experience into information, support, and connection with others facing health challenges.",
     "p3": "Here I will share real stories, everyday lessons, and reflections on care, limits, and hope."
+  },
+  "lessons": {
+    "heading": "Lessons learned",
+    "intro": "A record of what this journey has taught me — to remember, share, and help others going through something similar.",
+    "fromPost": "From post:",
+    "l1": {
+      "title": "Post-surgery symptoms should not be downplayed",
+      "text": "Intense abdominal pain, nightly fever, and difficulty eating by mouth were signs that something serious was happening — even after a seemingly routine surgery.",
+      "source": "The day I discovered the thrombosis"
+    },
+    "l2": {
+      "title": "A healthy lifestyle does not eliminate unexpected risks",
+      "text": "Exercise and balanced eating were part of my routine, and thrombosis still appeared. Health is not a guarantee — it is ongoing care and attention to the body."
+    },
+    "l3": {
+      "title": "In hard news, calm helps protect those we love",
+      "text": "I did not understand everything at once, but I tried to stay calm to give my wife and family a sense of safety — even while fearing for my life."
+    },
+    "l4": {
+      "title": "Follow medical instructions immediately",
+      "text": "\"Don't move, don't lift anything, don't drive\" — when the diagnosis is serious, every minute counts. Going to the hospital right away was decisive."
+    },
+    "l5": {
+      "title": "Organize your family with clarity and care",
+      "text": "Telling my wife, arranging the trip to São Paulo, and asking my stepfather not to give details to my mother and children at first required both delicacy and speed."
+    },
+    "l6": {
+      "title": "Faith can be a resource at the edge of your strength",
+      "text": "On the way to the hospital I almost fainted — and I prayed for strength. Spiritual support was part of what sustained me that day."
+    }
   },
   "contact": {
     "heading": "Contact me",
@@ -113,7 +147,7 @@
     },
     "o-dia-em-que-descobri-a-trombose": {
       "title": "The day I discovered the thrombosis",
-      "date": "Published on May 28, 2026",
+      "date": "Published on June 7, 2026",
       "p1": "I was living a normal life: I exercised and ate a balanced diet. I had no pain.",
       "p2": "After umbilical and bilateral inguinal hernia surgery, I began to feel intense abdominal pain, had difficulty eating by mouth, and ran a fever every night.",
       "p3": "I remember I was lying down when my doctor called — it was a normal workday. I asked for the day off when he asked what I was doing. I answered: \"I'm lying down, why?\"",

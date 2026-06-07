@@ -7,7 +7,8 @@
     "home": "Início",
     "about": "Sobre mim",
     "mural": "Mural de Recados",
-    "contact": "Contato"
+    "contact": "Contato",
+    "lessons": "Lições aprendidas"
   },
   "lang": {
     "label": "Idioma",
@@ -19,17 +20,20 @@
     "about": "Obrigado por visitar e acompanhar essa jornada.",
     "contact": "Sua mensagem é importante para mim.",
     "mural": "Mensagens de quem passa por aqui fazem diferença.",
-    "post": "Compartilhar também é uma forma de cuidado."
+    "post": "Compartilhar também é uma forma de cuidado.",
+    "lessons": "Cada lição é um pedaço desta jornada."
   },
   "meta": {
     "indexDesc": "Relatos pessoais sobre viver com dor crônica e trombose porto-mesentérica.",
-    "muralDesc": "Deixe um recado de apoio e leia mensagens de outras pessoas."
+    "muralDesc": "Deixe um recado de apoio e leia mensagens de outras pessoas.",
+    "lessonsDesc": "Aprendizados práticos da jornada com trombose porto-mesentérica e dor crônica."
   },
   "titles": {
     "index": "Vivendo Entre Dolores",
     "about": "Sobre mim | Vivendo Entre Dolores",
     "contact": "Entre em contato | Vivendo Entre Dolores",
     "mural": "Mural de Recados | Vivendo Entre Dolores",
+    "lessons": "Lições aprendidas | Vivendo Entre Dolores",
     "postComoTudoComecou": "Como tudo começou | Vivendo Entre Dolores",
     "postDescobriTrombose": "O dia em que descobri a trombose | Vivendo Entre Dolores"
   },
@@ -45,6 +49,36 @@
     "p1": "Criei este blog para registrar minha vivência com dor crônica e com a trombose porto-mesentérica.",
     "p2": "Meu objetivo é transformar uma experiência difícil em informação, acolhimento e troca com outras pessoas que também vivem desafios de saúde.",
     "p3": "Aqui vou compartilhar relatos reais, aprendizados do dia a dia e reflexões sobre cuidado, limites e esperança."
+  },
+  "lessons": {
+    "heading": "Lições aprendidas",
+    "intro": "Registro do que esta jornada tem me ensinado — para lembrar, compartilhar e ajudar quem passa por algo parecido.",
+    "fromPost": "Do post:",
+    "l1": {
+      "title": "Sintomas após cirurgia não devem ser minimizados",
+      "text": "Dor abdominal intensa, febre todas as noites e dificuldade para comer por via oral eram sinais de que algo sério estava acontecendo — mesmo depois de uma cirurgia aparentemente comum.",
+      "source": "O dia em que descobri a trombose"
+    },
+    "l2": {
+      "title": "Vida saudável não elimina riscos imprevistos",
+      "text": "Exercícios e alimentação equilibrada faziam parte da minha rotina, e mesmo assim a trombose apareceu. Saúde não é garantia — é cuidado contínuo e atenção ao corpo."
+    },
+    "l3": {
+      "title": "Na notícia difícil, a calma ajuda a proteger quem amamos",
+      "text": "Não entendi tudo na hora, mas tentei permanecer calmo para transmitir segurança à minha esposa e à família — mesmo sentindo medo do risco à minha vida."
+    },
+    "l4": {
+      "title": "Obedeça às orientações médicas imediatamente",
+      "text": "“Não se mexa, não carregue peso, não dirija” — quando o diagnóstico é grave, cada minuto conta. Ir ao hospital na hora foi decisivo."
+    },
+    "l5": {
+      "title": "Organize a família com clareza e cuidado",
+      "text": "Avisar a esposa, combinar a ida a São Paulo e pedir ao padrasto para não dar detalhes à mãe e aos filhos naquele primeiro momento exigiu delicadeza e rapidez ao mesmo tempo."
+    },
+    "l6": {
+      "title": "Fé pode ser um recurso no limite das forças",
+      "text": "No caminho ao hospital, quase desfaleci — e orei pedindo força. Encontrar apoio espiritual foi parte do que me sustentou naquele dia."
+    }
   },
   "contact": {
     "heading": "Entre em contato",
