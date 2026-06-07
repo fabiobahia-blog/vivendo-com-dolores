@@ -30,10 +30,13 @@
     "about": "Sobre mim | Vivendo Entre Dolores",
     "contact": "Entre em contato | Vivendo Entre Dolores",
     "mural": "Mural de Recados | Vivendo Entre Dolores",
-    "postComoTudoComecou": "Como tudo começou | Vivendo Entre Dolores"
+    "postComoTudoComecou": "Como tudo começou | Vivendo Entre Dolores",
+    "postDescobriTrombose": "O dia em que descobri a trombose | Vivendo Entre Dolores"
   },
   "index": {
     "posts": "Posts",
+    "post2Title": "O dia em que descobri a trombose",
+    "post2Date": "28 de maio de 2026",
     "post1Title": "Como tudo começou",
     "post1Date": "27 de maio de 2026"
   },
@@ -77,8 +80,8 @@
   },
   "reactions": {
     "title": "Reações",
-    "configuring": "Reações em configuração.",
-    "errorLoad": "Não foi possível carregar as reações.",
+    "configuring": "Reações na nuvem em configuração. Execute o SQL em docs/MURAL-SETUP.md no Supabase.",
+    "errorLoad": "Não foi possível carregar as reações da nuvem.",
     "like": "Curtir",
     "love": "Amei",
     "haha": "Haha",
@@ -107,6 +110,17 @@
       "p2": "Viver com dor crônica e com trombose porto-mesentérica mudou minha rotina, meu corpo e minha forma de enxergar o tempo.",
       "p3": "Neste espaço, quero contar essa jornada com honestidade: os dias bons, os dias difíceis, os medos e as pequenas vitórias.",
       "p4": "Se você está passando por algo parecido, espero que este blog te faça sentir menos sozinho."
+    },
+    "o-dia-em-que-descobri-a-trombose": {
+      "title": "O dia em que descobri a trombose",
+      "date": "Publicado em 28 de maio de 2026",
+      "p1": "Eu levava uma vida normal: fazia exercícios e me alimentava de forma balanceada. Não tinha dor.",
+      "p2": "Depois de uma cirurgia de hérnia umbilical e inguinal bilateral, comecei a sentir uma dor abdominal intensa, tive dificuldade para me alimentar por via oral e apresentei febre todas as noites.",
+      "p3": "Lembro que estava deitado quando meu médico me ligou — era um dia normal de trabalho. Pedi o dia off quando ele perguntou o que eu estava fazendo. Respondi: “Estou deitado, por que?”",
+      "quote": "“Não se mexa, não carregue peso, não dirija, não faça nada… você está com uma trombose imensa e preciso que venha ao hospital agora.”",
+      "p4": "Na hora não entendi bem o que estava acontecendo. Fiquei muito calmo e tentei transmitir essa calma para minha esposa e para os familiares. Estava preocupado com a minha saúde e com o risco de morte iminente.",
+      "p5": "Foi necessário organizar a família para ir ao hospital. Avisar minha esposa foi delicado — ela ficou muito preocupada e sem chão. Liguei para meu padrasto, que estava com minha mãe e meus filhos, e pedi para não dar detalhes: apenas dizer que precisávamos ir para São Paulo. Eles comentaram que, naquele momento, minha mãe começou a chorar.",
+      "p6": "Arrumamos tudo rápido. Fui ao hospital com minha esposa; lembro de ficar sem forças, quase desfalecer. Orei muito, pedindo a Maria e a Jesus que me abençoassem e que eu pudesse sair daquela situação."
     }
   }
 }

@@ -30,10 +30,13 @@
     "about": "About me | Living Between Pains",
     "contact": "Contact | Living Between Pains",
     "mural": "Message Board | Living Between Pains",
-    "postComoTudoComecou": "How it all began | Living Between Pains"
+    "postComoTudoComecou": "How it all began | Living Between Pains",
+    "postDescobriTrombose": "The day I discovered the thrombosis | Living Between Pains"
   },
   "index": {
     "posts": "Posts",
+    "post2Title": "The day I discovered the thrombosis",
+    "post2Date": "May 28, 2026",
     "post1Title": "How it all began",
     "post1Date": "May 27, 2026"
   },
@@ -77,8 +80,8 @@
   },
   "reactions": {
     "title": "Reactions",
-    "configuring": "Reactions are being configured.",
-    "errorLoad": "Could not load reactions.",
+    "configuring": "Cloud reactions are being set up. Run the SQL in docs/MURAL-SETUP.md on Supabase.",
+    "errorLoad": "Could not load reactions from the cloud.",
     "like": "Like",
     "love": "Love",
     "haha": "Haha",
@@ -107,6 +110,17 @@
       "p2": "Living with chronic pain and porto-mesenteric thrombosis changed my routine, my body, and how I see time.",
       "p3": "In this space, I want to tell this journey honestly: good days, hard days, fears, and small victories.",
       "p4": "If you are going through something similar, I hope this blog helps you feel less alone."
+    },
+    "o-dia-em-que-descobri-a-trombose": {
+      "title": "The day I discovered the thrombosis",
+      "date": "Published on May 28, 2026",
+      "p1": "I was living a normal life: I exercised and ate a balanced diet. I had no pain.",
+      "p2": "After umbilical and bilateral inguinal hernia surgery, I began to feel intense abdominal pain, had difficulty eating by mouth, and ran a fever every night.",
+      "p3": "I remember I was lying down when my doctor called — it was a normal workday. I asked for the day off when he asked what I was doing. I answered: \"I'm lying down, why?\"",
+      "quote": "\"Don't move, don't lift anything, don't drive, don't do anything… you have a massive thrombosis and I need you to come to the hospital now.\"",
+      "p4": "At first I didn't really understand what was happening. I stayed very calm and tried to pass that calm on to my wife and family. I was worried about my health and the risk of imminent death.",
+      "p5": "We had to organize the family to go to the hospital. Telling my wife was delicate — she was deeply worried and lost. I called my stepfather, who was with my mother and my children, and asked him not to give details: just say we needed to go to São Paulo. They said that, at that moment, my mother started to cry.",
+      "p6": "We packed everything quickly. I went to the hospital with my wife; I remember feeling weak, almost fainting. I prayed a lot, asking Mary and Jesus to bless me and help me get through that situation."
     }
   }
 }
