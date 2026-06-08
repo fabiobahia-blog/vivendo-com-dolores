@@ -148,6 +148,7 @@
   },
   "shareCard": {
     "title": "Image for social media",
+    "pickPost": "Choose a post",
     "note": "On Instagram, publish the image and use the short link in the caption. The QR code goes straight to the post.",
     "download": "Download image",
     "openCard": "Clickable card (WhatsApp)",

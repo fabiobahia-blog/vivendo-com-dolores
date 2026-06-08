@@ -6,7 +6,7 @@
   "nav": {
     "home": "Início",
     "about": "Sobre mim",
-    "mural": "Mural de Recados",
+    "mural": "Deixar um Recado",
     "contact": "Contato",
     "lessons": "Lições aprendidas"
   },
@@ -32,7 +32,7 @@
     "index": "Vivendo Entre Dolores",
     "about": "Sobre mim | Vivendo Entre Dolores",
     "contact": "Entre em contato | Vivendo Entre Dolores",
-    "mural": "Mural de Recados | Vivendo Entre Dolores",
+    "mural": "Deixar um Recado | Vivendo Entre Dolores",
     "lessons": "Lições aprendidas | Vivendo Entre Dolores",
     "postComoTudoComecou": "Como tudo começou | Vivendo Entre Dolores",
     "postDescobriTrombose": "O dia em que descobri a trombose | Vivendo Entre Dolores"
@@ -96,7 +96,7 @@
     "feedbackOk": "Abrindo seu aplicativo de email para finalizar o envio."
   },
   "mural": {
-    "heading": "Mural de Recados",
+    "heading": "Deixar um Recado",
     "note": "Este espaço é para mensagens de apoio, carinho e troca de experiências.",
     "setup": "O mural está sendo configurado. Em breve você poderá enviar recados aqui.",
     "name": "Nome",
@@ -114,10 +114,10 @@
   },
   "postMessages": {
     "heading": "Deixe um recado",
-    "note": "Deixe uma mensagem de apoio sobre este post. Ela também aparece no Mural de Recados.",
+    "note": "Deixe uma mensagem de apoio sobre este post. Ela também aparece em Deixar um Recado.",
     "recent": "Recados neste post",
     "empty": "Seja o primeiro a deixar um recado neste post.",
-    "seeAll": "Ver todos os recados no Mural",
+    "seeAll": "Ver todos em Deixar um Recado",
     "onPost": "No post: {title}",
     "toBlog": "Para o blog"
   },
@@ -148,6 +148,7 @@
   },
   "shareCard": {
     "title": "Imagem para redes sociais",
+    "pickPost": "Escolha o post",
     "note": "No Instagram, publique a imagem e use o link curto na legenda. O QR code leva direto ao post.",
     "download": "Baixar imagem",
     "openCard": "Cartão clicável (WhatsApp)",
