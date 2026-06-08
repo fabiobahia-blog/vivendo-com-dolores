@@ -6,13 +6,16 @@
     <title>Entre em contato | Vivendo Entre Dolores</title>
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+      content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://cdn.jsdelivr.net; style-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
     />
     <link rel="stylesheet" href="style.css" />
     <script src="lang.js" defer></script>
     <script src="analytics.config.js"></script>
     <script src="analytics.js" defer></script>
     <script src="contact.js" defer></script>
+    <script src="links.config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js" defer></script>
+    <script src="share-card.js" defer></script>
   </head>
   <body data-i18n-title="titles.contact">
     <header>
@@ -31,7 +34,7 @@
           <a href="index.html" data-i18n="nav.home">Início</a>
           <a href="sobre.html" data-i18n="nav.about">Sobre mim</a>
           <a href="licoes-aprendidas.html" data-i18n="nav.lessons">Lições aprendidas</a>
-          <a href="mural.html" data-i18n="nav.mural">Mural de Recados</a>
+          <a href="mural.html" data-i18n="nav.mural">Deixar um Recado</a>
           <a href="contato.html" data-i18n="nav.contact">Contato</a>
         </nav>
       </div>
@@ -96,6 +99,31 @@
             <button type="submit" data-i18n="contact.submit">Enviar</button>
             <p id="feedback" class="form-feedback" aria-live="polite"></p>
           </form>
+
+          <section class="share-card-section" data-share-card-section data-share-card-hub hidden>
+            <h3 data-i18n="shareCard.title">Imagem para redes sociais</h3>
+            <p class="share-card-note" data-i18n="shareCard.note">
+              No Instagram, publique a imagem e use o link curto na legenda. O QR code leva direto ao post.
+            </p>
+            <div class="form-field">
+              <label for="shareCardPick" data-i18n="shareCard.pickPost">Escolha o post</label>
+              <select id="shareCardPick" data-share-card-pick></select>
+            </div>
+            <p class="share-short-url" data-short-url-display></p>
+            <div class="share-card-preview" data-share-card-preview></div>
+            <div class="share-links">
+              <button type="button" class="share-action" data-share-card-download data-i18n="shareCard.download">
+                Baixar imagem
+              </button>
+              <a class="share-action" data-share-card-link href="#" target="_blank" rel="noopener noreferrer" data-i18n="shareCard.openCard">
+                Cartão clicável (WhatsApp)
+              </a>
+              <button type="button" class="share-action" data-share-copy-short data-i18n="shareCard.copyShort">
+                Copiar link curto
+              </button>
+            </div>
+            <p class="share-copy-feedback" data-share-card-feedback aria-live="polite"></p>
+          </section>
         </article>
       </div>
     </main>

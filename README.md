@@ -2,6 +2,10 @@
 
 Blog simples, gratuito e com controle total do conteúdo.
 
+**Site:** https://fabiobahia-blog.github.io/vivendo-com-dolores
+
+Documentação para agentes de IA: [AGENTS.md](AGENTS.md)
+
 ## Arquivos
 
 - `index.html` - Página inicial com lista de posts
@@ -9,8 +13,12 @@ Blog simples, gratuito e com controle total do conteúdo.
 - `como-tudo-comecou/index.html` - Primeiro post com URL amigável
 - `licoes-aprendidas.html` - Lições aprendidas desta jornada
 - `style.css` - Estilo minimalista (fundo branco e letras pretas)
+- `mural.html` - Mural de Recados (EN: Guestbook)
+- `mural.js` - Formulário e lista de recados (mural + posts)
+- `links.config.js` - Links curtos (`/l/{code}/`)
 - `.env` - Credenciais locais (editável, não vai para o GitHub)
 - `config.local.json` - Mesmas informações em JSON (editável, não vai para o GitHub)
+- `AGENTS.md` - Guia para agentes de IA (arquitetura, Supabase, convenções)
 
 ## Configurar credenciais (local)
 
@@ -114,12 +122,24 @@ No topo de cada página: bandeiras 🇧🇷 e 🇺🇸 para alternar português 
 - Traduções em `locales/pt-BR.json` e `locales/en-US.json`
 - Preferência salva no navegador (`localStorage`)
 
-## Mural de Recados
+## Mural de Recados / Guestbook
 
 Página: `mural.html` — visitantes deixam **Nome** (obrigatório) e **Recado** (texto). Em inglês, o menu usa **Guestbook**.
 
 Cada post também tem um formulário de recados no final da página. Recados gerais e recados de post compartilham a mesma tabela Supabase (`recados`); no mural, recados de post aparecem com o título do post.
 
-Para salvar e exibir recados e reações na nuvem, configure o Supabase (grátis): veja [docs/MURAL-SETUP.md](docs/MURAL-SETUP.md).
+### Supabase (nuvem grátis)
+
+| Documento | Conteúdo |
+|-----------|----------|
+| [docs/MURAL-SETUP.md](docs/MURAL-SETUP.md) | Primeira configuração + SQL das tabelas |
+| [docs/SUPABASE.md](docs/SUPABASE.md) | Conexão, pooler, migrations, verificação |
+| [AGENTS.md](AGENTS.md) | Referência rápida para IA |
+
+```bash
+cp .env.example .env          # preencher credenciais Supabase
+./scripts/sync-mural-config.sh
+./scripts/run-supabase-migration.sh   # se recados já existia sem post_slug
+```
 
 Reações usam Supabase por padrão (`reactions.config.js`). Alternativa: [docs/REACTIONS-UPSTASH.md](docs/REACTIONS-UPSTASH.md).

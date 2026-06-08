@@ -1,0 +1,20 @@
+---
+description: Vivendo Entre Dolores blog — architecture, Supabase, and conventions for AI agents
+alwaysApply: true
+---
+
+# Vivendo Entre Dolores
+
+Read [AGENTS.md](AGENTS.md) for full context. Key constraints:
+
+- Static GitHub Pages site — no build step, vanilla HTML/CSS/JS
+- **Never commit** `.env` or `config.local.json` (secrets)
+- Supabase project ref: `gduyitvnnyuewwbebeyq` — dashboard: https://supabase.com/dashboard/project/gduyitvnnyuewwbebeyq
+- DB migrations: use pooler `aws-1-sa-east-1.pooler.supabase.com` or `./scripts/run-supabase-migration.sh` — not direct `db.*` host (IPv6-only)
+- Guestbook EN / Deixar um Recado PT — same `recados` table; `post_slug` null = general, set = post message
+- Social share card image: `contato.html` only (post picker), not on post pages
+- i18n: always update both `locales/pt-BR.json` and `locales/en-US.json`
+- Posts: `{slug}/index.html` from `templates/post-template.html`; include `data-mural-section` + `data-post-slug`
+- Sync Supabase keys to site: `./scripts/sync-mural-config.sh`
+
+Detailed Supabase connection: [docs/SUPABASE.md](docs/SUPABASE.md)

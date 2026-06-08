@@ -1,5 +1,11 @@
 # Mural de Recados — configuração Supabase (grátis)
 
+Projeto deste blog: **gduyitvnnyuewwbebeyq** (org `vivendo-entre-dolores`).
+
+- Dashboard: https://supabase.com/dashboard/project/gduyitvnnyuewwbebeyq
+- Conexão, pooler e troubleshooting: [SUPABASE.md](SUPABASE.md)
+- Guia para agentes de IA: [AGENTS.md](../AGENTS.md)
+
 ## 1. Criar projeto
 
 1. Acesse [supabase.com](https://supabase.com/) e crie uma conta.
@@ -108,7 +114,14 @@ O mural, os recados nos posts e as reações passam a funcionar na nuvem (Supaba
 
 ## Recados nos posts (projeto já existente)
 
-Se a tabela `recados` foi criada **antes** desta atualização, execute no **SQL Editor**:
+Se a tabela `recados` foi criada **antes** desta atualização, aplique a migration de `post_slug`:
+
+```bash
+chmod +x scripts/run-supabase-migration.sh
+./scripts/run-supabase-migration.sh
+```
+
+Ou no **SQL Editor** do dashboard:
 
 ```sql
 alter table public.recados
@@ -120,6 +133,15 @@ create index if not exists recados_post_slug_created_at_idx
 
 - `post_slug` vazio → recado geral no mural (`mural.html`)
 - `post_slug` preenchido → recado ligado a um post; aparece no post e no mural (com indicação do post)
+
+Verificação rápida (requer `.env` com `MURAL_SUPABASE_ANON_KEY`):
+
+```bash
+source .env
+curl -s "https://gduyitvnnyuewwbebeyq.supabase.co/rest/v1/recados?select=post_slug&limit=1" \
+  -H "apikey: $MURAL_SUPABASE_ANON_KEY" \
+  -H "Authorization: Bearer $MURAL_SUPABASE_ANON_KEY"
+```
 
 ## Reações nos posts
 
