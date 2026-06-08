@@ -226,16 +226,19 @@ footer {
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
+.share-action:visited {
+  color: #000000;
+}
+
 .share-action:hover,
 .share-action:focus-visible,
-.share-action:active {
+.share-action:active,
+.share-action:visited:hover,
+.share-action:visited:focus-visible,
+.share-action:visited:active {
   background: #000000;
   color: #ffffff;
   outline: none;
-}
-
-.share-action:visited {
-  color: #000000;
 }
 
 .share-copy-feedback {
