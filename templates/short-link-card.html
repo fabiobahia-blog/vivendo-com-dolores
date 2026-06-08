@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{LINK_TITLE}} | Vivendo Entre Dolores</title>
+    <meta name="description" content="{{LINK_EXCERPT}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{LINK_TITLE}}" />
+    <meta property="og:description" content="{{LINK_EXCERPT}}" />
+    <meta property="og:url" content="{{SHORT_URL}}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{LINK_TITLE}}" />
+    <meta name="twitter:description" content="{{LINK_EXCERPT}}" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Georgia, "Times New Roman", serif;
+        background: #ffffff;
+        color: #000000;
+      }
+
+      .link-card {
+        display: flex;
+        min-height: 100vh;
+        padding: 1.5rem;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .link-card:hover .link-card-inner,
+      .link-card:focus-visible .link-card-inner {
+        background: #000000;
+        color: #ffffff;
+      }
+
+      .link-card-inner {
+        margin: auto;
+        width: min(100%, 32rem);
+        border: 2px solid #000000;
+        padding: 2rem 1.75rem;
+        transition: background-color 0.15s ease, color 0.15s ease;
+      }
+
+      .link-card-site {
+        margin: 0 0 1rem;
+        font-size: 0.85rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .link-card-inner h1 {
+        margin: 0 0 1rem;
+        font-size: 1.75rem;
+        line-height: 1.25;
+      }
+
+      .link-card-excerpt {
+        margin: 0 0 1.5rem;
+        font-size: 1.05rem;
+        line-height: 1.55;
+      }
+
+      .link-card-cta {
+        margin: 0 0 1rem;
+        font-size: 0.95rem;
+        font-weight: bold;
+      }
+
+      .link-card-short {
+        margin: 0;
+        font-size: 0.9rem;
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="link-card" href="{{TARGET_ABS}}">
+      <article class="link-card-inner">
+        <p class="link-card-site">Vivendo Entre Dolores</p>
+        <h1>{{LINK_TITLE}}</h1>
+        <p class="link-card-excerpt">{{LINK_EXCERPT}}</p>
+        <p class="link-card-cta">Toque para ler o relato completo →</p>
+        <p class="link-card-short">{{SHORT_URL}}</p>
+      </article>
+    </a>
+  </body>
+</html>

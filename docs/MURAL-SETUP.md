@@ -5,17 +5,22 @@
 1. Acesse [supabase.com](https://supabase.com/) e crie uma conta.
 2. **New project** → escolha nome e senha do banco.
 
-## 2. Criar tabela
+## 2. Criar tabelas (mural + reações)
 
-No painel: **SQL Editor** → cole e execute:
+No painel: **SQL Editor** → cole e execute **tudo de uma vez**:
 
 ```sql
+-- Mural de recados (post_slug null = recado geral; preenchido = recado em um post)
 create table public.recados (
   id uuid primary key default gen_random_uuid(),
   nome text not null check (char_length(nome) >= 2 and char_length(nome) <= 80),
   recado text not null check (char_length(recado) >= 3 and char_length(recado) <= 500),
+  post_slug text,
   created_at timestamptz not null default now()
 );
+
+create index recados_post_slug_created_at_idx
+  on public.recados (post_slug, created_at desc);
 
 alter table public.recados enable row level security;
 
@@ -29,6 +34,36 @@ create policy "Visitantes podem enviar recados"
     char_length(nome) >= 2
     and char_length(recado) >= 3
   );
+
+-- Reações nos posts (nuvem — contagem pública)
+create table public.post_reactions (
+  post_slug text not null,
+  visitor_id text not null,
+  reaction text not null check (
+    reaction in ('like', 'love', 'haha', 'wow', 'sad', 'angry')
+  ),
+  created_at timestamptz not null default now(),
+  primary key (post_slug, visitor_id)
+);
+
+alter table public.post_reactions enable row level security;
+
+create policy "Leitura publica de reacoes"
+  on public.post_reactions for select
+  using (true);
+
+create policy "Visitantes podem reagir"
+  on public.post_reactions for insert
+  with check (char_length(visitor_id) >= 8);
+
+create policy "Visitantes podem atualizar sua reacao"
+  on public.post_reactions for update
+  using (true)
+  with check (char_length(visitor_id) >= 8);
+
+create policy "Visitantes podem remover sua reacao"
+  on public.post_reactions for delete
+  using (true);
 ```
 
 ## 3. Variáveis de ambiente (`.env`)
@@ -69,8 +104,25 @@ git commit -m "Configurar mural de recados"
 git push
 ```
 
-O mural passa a listar e receber recados em tempo real.
+O mural, os recados nos posts e as reações passam a funcionar na nuvem (Supabase).
 
-## Reações nos posts (emoji estilo Facebook)
+## Recados nos posts (projeto já existente)
 
-Execute também o SQL em [REACTIONS-SETUP.sql](REACTIONS-SETUP.sql) no **SQL Editor**.
+Se a tabela `recados` foi criada **antes** desta atualização, execute no **SQL Editor**:
+
+```sql
+alter table public.recados
+  add column if not exists post_slug text;
+
+create index if not exists recados_post_slug_created_at_idx
+  on public.recados (post_slug, created_at desc);
+```
+
+- `post_slug` vazio → recado geral no mural (`mural.html`)
+- `post_slug` preenchido → recado ligado a um post; aparece no post e no mural (com indicação do post)
+
+## Reações nos posts
+
+Usam o mesmo Supabase do mural (`reactions.config.js` com `REACTIONS_BACKEND = "supabase"`). Se a tabela `post_reactions` ainda não existir, execute o bloco SQL acima.
+
+Alternativa na nuvem: [Upstash Redis](REACTIONS-UPSTASH.md). Detalhes em [REACTIONS-ALTERNATIVES.md](REACTIONS-ALTERNATIVES.md).

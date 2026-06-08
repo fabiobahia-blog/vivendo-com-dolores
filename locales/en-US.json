@@ -6,7 +6,7 @@
   "nav": {
     "home": "Home",
     "about": "About me",
-    "mural": "Message Board",
+    "mural": "Guestbook",
     "contact": "Contact",
     "lessons": "Lessons learned"
   },
@@ -19,20 +19,20 @@
     "index": "Built simply to share a real journey.",
     "about": "Thank you for visiting and following this journey.",
     "contact": "Your message matters to me.",
-    "mural": "Messages from visitors make a difference.",
+    "mural": "Every message in the guestbook makes a difference.",
     "post": "Sharing is also a form of care.",
     "lessons": "Each lesson is a piece of this journey."
   },
   "meta": {
     "indexDesc": "Personal stories about living with chronic pain and porto-mesenteric thrombosis.",
-    "muralDesc": "Leave a supportive message and read notes from others.",
+    "muralDesc": "Leave a supportive message in the guestbook and read notes from others.",
     "lessonsDesc": "Practical lessons from living with porto-mesenteric thrombosis and chronic pain."
   },
   "titles": {
     "index": "Living Between Pains",
     "about": "About me | Living Between Pains",
     "contact": "Contact | Living Between Pains",
-    "mural": "Message Board | Living Between Pains",
+    "mural": "Guestbook | Living Between Pains",
     "lessons": "Lessons learned | Living Between Pains",
     "postComoTudoComecou": "How it all began | Living Between Pains",
     "postDescobriTrombose": "The day I discovered the thrombosis | Living Between Pains"
@@ -96,21 +96,30 @@
     "feedbackOk": "Opening your email app to finish sending."
   },
   "mural": {
-    "heading": "Message Board",
+    "heading": "Guestbook",
     "note": "This space is for support, kindness, and sharing experiences.",
-    "setup": "The board is being set up. You will be able to post messages here soon.",
+    "setup": "The guestbook is being set up. You will be able to post messages here soon.",
     "name": "Name",
     "message": "Message",
     "submit": "Post message",
     "recent": "Recent messages",
     "empty": "Be the first to leave a message.",
-    "configuring": "Board is being configured. Coming soon.",
+    "configuring": "Guestbook is being configured. Coming soon.",
     "sending": "Sending...",
     "published": "Message posted. Thank you!",
     "errorSend": "Could not send. Please try again.",
     "errorLoad": "Could not load messages right now.",
     "nameRequired": "Please enter your name.",
     "messageRequired": "Write a message with at least 3 characters."
+  },
+  "postMessages": {
+    "heading": "Leave a message",
+    "note": "Leave a supportive note about this post. It also appears on the Guestbook.",
+    "recent": "Messages on this post",
+    "empty": "Be the first to leave a message on this post.",
+    "seeAll": "See all messages on the Guestbook",
+    "onPost": "On: {title}",
+    "toBlog": "To the blog"
   },
   "reactions": {
     "title": "Reactions",
@@ -134,7 +143,18 @@
     "copy": "Copy link",
     "copyOk": "Link copied!",
     "instagramOk": "Link copied! Paste on Instagram (Stories, DM, or bio).",
-    "shareText": "Read this post: {title}"
+    "shareText": "Read this post: {title}",
+    "usingShortLink": "Short link: {url}"
+  },
+  "shareCard": {
+    "title": "Image for social media",
+    "note": "On Instagram, publish the image and use the short link in the caption. The QR code goes straight to the post.",
+    "download": "Download image",
+    "openCard": "Clickable card (WhatsApp)",
+    "copyShort": "Copy short link",
+    "downloadOk": "Image downloaded!",
+    "copyShortOk": "Short link copied!",
+    "scanOrTap": "Scan the QR or visit:"
   },
   "posts": {
     "como-tudo-comecou": {

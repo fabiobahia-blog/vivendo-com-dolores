@@ -112,6 +112,15 @@
     "nameRequired": "Informe seu nome.",
     "messageRequired": "Escreva um recado com pelo menos 3 caracteres."
   },
+  "postMessages": {
+    "heading": "Deixe um recado",
+    "note": "Deixe uma mensagem de apoio sobre este post. Ela também aparece no Mural de Recados.",
+    "recent": "Recados neste post",
+    "empty": "Seja o primeiro a deixar um recado neste post.",
+    "seeAll": "Ver todos os recados no Mural",
+    "onPost": "No post: {title}",
+    "toBlog": "Para o blog"
+  },
   "reactions": {
     "title": "Reações",
     "configuring": "Reações na nuvem em configuração. Execute o SQL em docs/MURAL-SETUP.md no Supabase.",
@@ -134,7 +143,18 @@
     "copy": "Copiar link",
     "copyOk": "Link copiado!",
     "instagramOk": "Link copiado! Cole no Instagram (Stories, DM ou bio).",
-    "shareText": "Leia este post: {title}"
+    "shareText": "Leia este post: {title}",
+    "usingShortLink": "Link curto: {url}"
+  },
+  "shareCard": {
+    "title": "Imagem para redes sociais",
+    "note": "No Instagram, publique a imagem e use o link curto na legenda. O QR code leva direto ao post.",
+    "download": "Baixar imagem",
+    "openCard": "Cartão clicável (WhatsApp)",
+    "copyShort": "Copiar link curto",
+    "downloadOk": "Imagem baixada!",
+    "copyShortOk": "Link curto copiado!",
+    "scanOrTap": "Escaneie o QR ou acesse:"
   },
   "posts": {
     "como-tudo-comecou": {

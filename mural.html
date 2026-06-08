@@ -48,46 +48,48 @@
             Este espaço é para mensagens de apoio, carinho e troca de experiências.
           </p>
 
-          <p id="muralSetupNote" class="mural-setup" hidden data-i18n="mural.setup">
-            O mural está sendo configurado. Em breve você poderá enviar recados aqui.
-          </p>
+          <section data-mural-section>
+            <p data-mural-setup class="mural-setup" hidden data-i18n="mural.setup">
+              O mural está sendo configurado. Em breve você poderá enviar recados aqui.
+            </p>
 
-          <form id="muralForm" class="contact-form mural-form" novalidate>
-            <div class="form-field">
-              <label for="muralNome"><span data-i18n="mural.name">Nome</span> <span aria-hidden="true">*</span></label>
-              <input
-                id="muralNome"
-                name="nome"
-                type="text"
-                maxlength="80"
-                autocomplete="name"
-                required
-              />
-            </div>
+            <form data-mural-form class="contact-form mural-form" novalidate>
+              <div class="form-field">
+                <label><span data-i18n="mural.name">Nome</span> <span aria-hidden="true">*</span></label>
+                <input
+                  data-mural-name
+                  name="nome"
+                  type="text"
+                  maxlength="80"
+                  autocomplete="name"
+                  required
+                />
+              </div>
 
-            <div class="form-field">
-              <label for="muralTexto"><span data-i18n="mural.message">Recado</span> <span aria-hidden="true">*</span></label>
-              <textarea
-                id="muralTexto"
-                name="recado"
-                rows="5"
-                maxlength="500"
-                required
-              ></textarea>
-            </div>
+              <div class="form-field">
+                <label><span data-i18n="mural.message">Recado</span> <span aria-hidden="true">*</span></label>
+                <textarea
+                  data-mural-text
+                  name="recado"
+                  rows="5"
+                  maxlength="500"
+                  required
+                ></textarea>
+              </div>
 
-            <div class="form-field honeypot" aria-hidden="true">
-              <label for="muralWebsite">Website</label>
-              <input id="muralWebsite" name="website" type="text" tabindex="-1" autocomplete="off" />
-            </div>
+              <div class="form-field honeypot" aria-hidden="true">
+                <label>Website</label>
+                <input data-mural-honeypot name="website" type="text" tabindex="-1" autocomplete="off" />
+              </div>
 
-            <button type="submit" class="mural-submit" data-i18n="mural.submit">Publicar recado</button>
-            <p id="muralFeedback" class="form-feedback" aria-live="polite"></p>
-          </form>
+              <button type="submit" class="mural-submit" data-i18n="mural.submit">Publicar recado</button>
+              <p data-mural-feedback class="form-feedback" aria-live="polite"></p>
+            </form>
 
-          <section class="mural-board" aria-labelledby="muralBoardTitle">
-            <h3 id="muralBoardTitle" data-i18n="mural.recent">Recados recentes</h3>
-            <ul id="muralList" class="mural-list"></ul>
+            <section class="mural-board" aria-labelledby="muralBoardTitle">
+              <h3 id="muralBoardTitle" data-i18n="mural.recent">Recados recentes</h3>
+              <ul data-mural-list class="mural-list"></ul>
+            </section>
           </section>
         </article>
       </div>

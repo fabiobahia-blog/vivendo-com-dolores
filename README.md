@@ -116,7 +116,9 @@ No topo de cada página: bandeiras 🇧🇷 e 🇺🇸 para alternar português 
 
 ## Mural de Recados
 
-Página: `mural.html` — visitantes deixam **Nome** (obrigatório) e **Recado** (texto).
+Página: `mural.html` — visitantes deixam **Nome** (obrigatório) e **Recado** (texto). Em inglês, o menu usa **Guestbook**.
+
+Cada post também tem um formulário de recados no final da página. Recados gerais e recados de post compartilham a mesma tabela Supabase (`recados`); no mural, recados de post aparecem com o título do post.
 
 Para salvar e exibir recados e reações na nuvem, configure o Supabase (grátis): veja [docs/MURAL-SETUP.md](docs/MURAL-SETUP.md).
 
