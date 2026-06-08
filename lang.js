@@ -2,6 +2,7 @@
   "use strict";
 
   var STORAGE_KEY = "blog_lang";
+  var LOCALE_VERSION = "2";
   var DEFAULT_LANG = "pt-BR";
   var SUPPORTED = ["pt-BR", "en-US"];
 
@@ -83,7 +84,7 @@
   function loadLanguage(lang) {
     if (SUPPORTED.indexOf(lang) === -1) lang = DEFAULT_LANG;
     var base = getScriptBase();
-    return fetch(base + lang + ".json")
+    return fetch(base + lang + ".json?v=" + LOCALE_VERSION)
       .then(function (res) {
         if (!res.ok) throw new Error("locale");
         return res.json();
