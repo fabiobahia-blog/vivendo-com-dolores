@@ -98,13 +98,13 @@
   "mural": {
     "heading": "Deixar um Recado",
     "note": "Este espaço é para mensagens de apoio, carinho e troca de experiências.",
-    "setup": "O mural está sendo configurado. Em breve você poderá enviar recados aqui.",
+    "setup": "Deixar um Recado está sendo configurado. Em breve você poderá enviar mensagens aqui.",
     "name": "Nome",
     "message": "Recado",
     "submit": "Publicar recado",
     "recent": "Recados recentes",
     "empty": "Seja o primeiro a deixar um recado.",
-    "configuring": "Mural em configuração. Em breve.",
+    "configuring": "Deixar um Recado em configuração. Em breve.",
     "sending": "Enviando...",
     "published": "Recado publicado. Obrigado!",
     "errorSend": "Não foi possível enviar. Tente novamente.",
@@ -113,7 +113,7 @@
     "messageRequired": "Escreva um recado com pelo menos 3 caracteres."
   },
   "postMessages": {
-    "heading": "Deixe um recado",
+    "heading": "Deixar um Recado",
     "note": "Deixe uma mensagem de apoio sobre este post. Ela também aparece em Deixar um Recado.",
     "recent": "Recados neste post",
     "empty": "Seja o primeiro a deixar um recado neste post.",
