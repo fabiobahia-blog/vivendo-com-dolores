@@ -11,34 +11,56 @@
     return key;
   }
 
+  function getShareUrl() {
+    const postSlug = document.body.dataset.postSlug;
+    if (window.BlogLinks && postSlug) {
+      const link = BlogLinks.getByPostSlug(postSlug);
+      if (link) return BlogLinks.getShortUrl(link.code);
+    }
+    return window.location.href.split("#")[0];
+  }
+
   function updateShareLinks() {
-  const pageUrl = encodeURIComponent(window.location.href);
-  const pageTitle = encodeURIComponent(document.title);
-  const text = encodeURIComponent(
-    t("share.shareText", { title: document.title })
-  );
+    const shareUrl = getShareUrl();
+    const pageUrl = encodeURIComponent(shareUrl);
+    const pageTitle = encodeURIComponent(document.title);
+    const text = encodeURIComponent(
+      t("share.shareText", { title: document.title })
+    );
 
-  const links = {
-    whatsapp: "https://wa.me/?text=" + text + "%20" + pageUrl,
-    x: "https://twitter.com/intent/tweet?text=" + text + "&url=" + pageUrl,
-    facebook: "https://www.facebook.com/sharer/sharer.php?u=" + pageUrl,
-    linkedin: "https://www.linkedin.com/sharing/share-offsite/?url=" + pageUrl,
-    email: "mailto:?subject=" + pageTitle + "&body=" + text + "%0A%0A" + pageUrl,
-  };
+    const links = {
+      whatsapp: "https://wa.me/?text=" + text + "%20" + pageUrl,
+      x: "https://twitter.com/intent/tweet?text=" + text + "&url=" + pageUrl,
+      facebook: "https://www.facebook.com/sharer/sharer.php?u=" + pageUrl,
+      linkedin: "https://www.linkedin.com/sharing/share-offsite/?url=" + pageUrl,
+      email: "mailto:?subject=" + pageTitle + "&body=" + text + "%0A%0A" + pageUrl,
+    };
 
-  Object.entries(links).forEach(function ([key, href]) {
-    const anchor = section.querySelector('[data-share="' + key + '"]');
-    if (anchor) anchor.href = href;
-  });
+    Object.entries(links).forEach(function ([key, href]) {
+      const anchor = section.querySelector('[data-share="' + key + '"]');
+      if (anchor) anchor.href = href;
+    });
+
+    const shortDisplay = section.querySelector("[data-share-short-url]");
+    if (shortDisplay && window.BlogLinks && document.body.dataset.postSlug) {
+      const link = BlogLinks.getByPostSlug(document.body.dataset.postSlug);
+      if (link) {
+        shortDisplay.textContent = t("share.usingShortLink", {
+          url: BlogLinks.getShortUrl(link.code),
+        });
+        shortDisplay.hidden = false;
+      }
+    }
   }
 
   updateShareLinks();
   document.addEventListener("bloglangchange", updateShareLinks);
 
   const copyFeedback = section.querySelector("[data-copy-feedback]");
-  const rawUrl = window.location.href;
 
   function copyUrl(successMessage) {
+    const shareUrl = getShareUrl();
+
     function showSuccess() {
       if (copyFeedback) {
         copyFeedback.textContent = successMessage;
@@ -50,7 +72,7 @@
 
     function fallbackCopy() {
       const textarea = document.createElement("textarea");
-      textarea.value = rawUrl;
+      textarea.value = shareUrl;
       textarea.setAttribute("readonly", "");
       textarea.style.position = "absolute";
       textarea.style.left = "-9999px";
@@ -68,7 +90,7 @@
     }
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(rawUrl).then(showSuccess).catch(fallbackCopy);
+      navigator.clipboard.writeText(shareUrl).then(showSuccess).catch(fallbackCopy);
       return;
     }
 
