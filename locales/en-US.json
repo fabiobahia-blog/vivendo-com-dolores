@@ -35,14 +35,17 @@
     "mural": "Share a Word | Living Between Pains",
     "lessons": "Lessons learned | Living Between Pains",
     "postComoTudoComecou": "How it all began | Living Between Pains",
-    "postDescobriTrombose": "The day I discovered the thrombosis | Living Between Pains"
+    "postDescobriTrombose": "The day I discovered the thrombosis | Living Between Pains",
+    "postChegandoHospital": "Arriving at the hospital | Living Between Pains"
   },
   "index": {
     "posts": "Posts",
     "post2Title": "The day I discovered the thrombosis",
     "post2Date": "June 7, 2026",
     "post1Title": "How it all began",
-    "post1Date": "May 27, 2026"
+    "post1Date": "May 27, 2026",
+    "post3Title": "Arriving at the hospital",
+    "post3Date": "June 21, 2026"
   },
   "about": {
     "heading": "About me",
@@ -144,7 +147,13 @@
     "copyOk": "Link copied!",
     "instagramOk": "Link copied! Paste on Instagram (Stories, DM, or bio).",
     "shareText": "Read this post: {title}",
-    "usingShortLink": "Short link: {url}"
+    "usingShortLink": "Short link: {url}",
+    "socialCaptionsTitle": "Captions for social media",
+    "socialCopyOk": "Caption copied!",
+    "socialCopyWhatsapp": "Copy caption (WhatsApp)",
+    "socialCopyFacebook": "Copy caption (Facebook)",
+    "socialCopyInstagram": "Copy caption (Instagram)",
+    "socialCopyLinkedin": "Copy caption (LinkedIn)"
   },
   "shareCard": {
     "title": "Image for social media",
@@ -176,6 +185,20 @@
       "p4": "At first I didn't really understand what was happening. I stayed very calm and tried to pass that calm on to my wife and family. I was worried about my health and the risk of imminent death.",
       "p5": "We had to organize the family to go to the hospital. Telling my wife was delicate — she was deeply worried and lost. I called my stepfather, who was with my mother and my children, and asked him not to give details: just say we needed to go to São Paulo. They said that, at that moment, my mother started to cry.",
       "p6": "We packed everything quickly. I went to the hospital with my wife; I remember feeling weak, almost fainting. I prayed a lot, asking Mary and Jesus to bless me and help me get through that situation."
+    },
+    "chegando-no-hospital": {
+      "title": "Arriving at the hospital",
+      "date": "Published on June 21, 2026",
+      "p1": "Arriving at the hospital was calm; I felt numb, a calm before the storm.",
+      "p2": "I was admitted and promptly taken to a room. In that setting, the doctors were already waiting for me and wanted to see me.",
+      "p3": "That was when the roller coaster of emotions and tests began — yes, because many specialties came to see me: the gastric surgeon to find out if I needed surgery, the hematologist to understand if it was a blood disease, the vascular specialist in the circulatory system, the hepatologist who cares for the liver wanting to know if it was cancer, the nutrition team to guide my diet, the nurses with day-to-day care… phew…",
+      "p4": "The amount of information I needed to take in was very large; my partner was by my side, Isabela. I learned much later that the conversations with the doctors were \"there is a risk of death\", yet everything was always handled with great lightness in front of me and I always kept an unshakeable faith that everything would work out.",
+      "social": {
+        "whatsapp": "I arrived at the hospital in a strange calm — almost numb. Then came the surgeon, hematologist, vascular specialist, hepatologist, nutrition team… Isabela by my side the whole time. I wrote about this chapter on the blog:\n\n{url}",
+        "facebook": "Arriving at the hospital felt quiet — a calm before the storm. In the room, specialists kept rotating: surgery, blood, circulation, liver, nutrition… Isabela was with me while I held on to faith that things would work out. New post on Living Between Pains:\n\n{url}",
+        "instagram": "A calm before the storm at the hospital. Specialists, tests, and Isabela by my side — and faith. Read the full story:\n\n{url}\n\n#LivingBetweenPains #Health #CareJourney",
+        "linkedin": "Arriving at the hospital almost numb, then stepping into a roller coaster of specialists and tests — it changes how you process time and information. Isabela was with me; I held on to faith. I wrote about this chapter on the blog:\n\n{url}"
+      }
     }
   }
 }

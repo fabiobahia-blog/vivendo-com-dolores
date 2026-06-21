@@ -35,14 +35,17 @@
     "mural": "Deixar um Recado | Vivendo Entre Dolores",
     "lessons": "Lições aprendidas | Vivendo Entre Dolores",
     "postComoTudoComecou": "Como tudo começou | Vivendo Entre Dolores",
-    "postDescobriTrombose": "O dia em que descobri a trombose | Vivendo Entre Dolores"
+    "postDescobriTrombose": "O dia em que descobri a trombose | Vivendo Entre Dolores",
+    "postChegandoHospital": "Chegando no hospital | Vivendo Entre Dolores"
   },
   "index": {
     "posts": "Posts",
     "post2Title": "O dia em que descobri a trombose",
     "post2Date": "7 de junho de 2026",
     "post1Title": "Como tudo começou",
-    "post1Date": "27 de maio de 2026"
+    "post1Date": "27 de maio de 2026",
+    "post3Title": "Chegando no hospital",
+    "post3Date": "21 de junho de 2026"
   },
   "about": {
     "heading": "Sobre mim",
@@ -144,7 +147,13 @@
     "copyOk": "Link copiado!",
     "instagramOk": "Link copiado! Cole no Instagram (Stories, DM ou bio).",
     "shareText": "Leia este post: {title}",
-    "usingShortLink": "Link curto: {url}"
+    "usingShortLink": "Link curto: {url}",
+    "socialCaptionsTitle": "Textos para redes sociais",
+    "socialCopyOk": "Legenda copiada!",
+    "socialCopyWhatsapp": "Copiar legenda (WhatsApp)",
+    "socialCopyFacebook": "Copiar legenda (Facebook)",
+    "socialCopyInstagram": "Copiar legenda (Instagram)",
+    "socialCopyLinkedin": "Copiar legenda (LinkedIn)"
   },
   "shareCard": {
     "title": "Imagem para redes sociais",
@@ -176,6 +185,20 @@
       "p4": "Na hora não entendi bem o que estava acontecendo. Fiquei muito calmo e tentei transmitir essa calma para minha esposa e para os familiares. Estava preocupado com a minha saúde e com o risco de morte iminente.",
       "p5": "Foi necessário organizar a família para ir ao hospital. Avisar minha esposa foi delicado — ela ficou muito preocupada e sem chão. Liguei para meu padrasto, que estava com minha mãe e meus filhos, e pedi para não dar detalhes: apenas dizer que precisávamos ir para São Paulo. Eles comentaram que, naquele momento, minha mãe começou a chorar.",
       "p6": "Arrumamos tudo rápido. Fui ao hospital com minha esposa; lembro de ficar sem forças, quase desfalecer. Orei muito, pedindo a Maria e a Jesus que me abençoassem e que eu pudesse sair daquela situação."
+    },
+    "chegando-no-hospital": {
+      "title": "Chegando no hospital",
+      "date": "Publicado em 21 de junho de 2026",
+      "p1": "A chegada no hospital foi tranquila, me sentia anestesiado, uma calma antes da tempestade.",
+      "p2": "Fui admitido e prontamente levado para um quarto, neste ambiente os médicos já me aguardavam e desejavam me ver.",
+      "p3": "Ali começou a montanha-russa de emoções e testes, sim, pois foram diversas especialidades a me visitar, o cirurgião gástrico para saber se precisava de cirurgia, o hematologista para entender se era uma doença no sangue, o vascular especialista no sistema circulatório, o hepatologista que cuida do fígado querendo saber se era câncer, a equipe de nutrição para orientar a dieta, os enfermeiros com os cuidados do dia a dia… ufa…",
+      "p4": "A quantidade de informação que eu precisava absorver era muito grande, minha companheira estava ao meu lado, Isabela, soube muito tempo depois que as conversas com os médicos eram \"tem risco de morte\", porém tudo era sempre tratado com muita leveza na minha frente e eu sempre mantive uma fé inabalável que tudo daria certo.",
+      "social": {
+        "whatsapp": "Cheguei ao hospital numa calma estranha — quase anestesiado. Depois vieram cirurgião, hematologista, vascular, hepatologista, nutrição… Isabela ao meu lado o tempo todo. Contei esse capítulo no blog:\n\n{url}",
+        "facebook": "A chegada no hospital parecia tranquila — uma calma antes da tempestade. No quarto, especialistas de áreas diferentes se revezavam: cirurgia, sangue, circulação, fígado, nutrição… Isabela estava comigo enquanto eu mantinha a fé de que tudo daria certo. Novo relato no blog Vivendo Entre Dolores:\n\n{url}",
+        "instagram": "Calma antes da tempestade no hospital. Especialistas, exames e Isabela ao meu lado — e fé. Leia o relato completo:\n\n{url}\n\n#VivendoEntreDolores #Saúde #JornadaDeCuidado",
+        "linkedin": "Chegar ao hospital numa calma quase anestesiada e, minutos depois, entrar numa montanha-russa de especialistas e exames — isso muda a forma como a gente enxerga o tempo e a informação. Isabela estava ao meu lado; eu mantinha a fé. Registrei esse capítulo no blog:\n\n{url}"
+      }
     }
   }
 }
