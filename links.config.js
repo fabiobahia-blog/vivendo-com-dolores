@@ -13,6 +13,12 @@ window.BlogLinks = {
       excerpt:
         "O início desta jornada com dor crônica e trombose porto-mesentérica.",
     },
+    hospital: {
+      postSlug: "chegando-no-hospital",
+      title: "Chegando no hospital",
+      excerpt:
+        "Calma antes da tempestade, montanha-russa de especialistas e fé de que tudo daria certo.",
+    },
   },
   getByPostSlug: function (postSlug) {
     for (const [code, entry] of Object.entries(this.entries)) {
