@@ -31,7 +31,7 @@ Browser (GitHub Pages)
 
 **Guestbook / Mural de Recados**
 
-- PT nav: **Deixar um Recado** — EN nav: **Guestbook** (not "Comments" or "Message Board")
+- PT nav: **Deixar um Recado** (guestbook) / **Falar Comigo** (contact) — EN: **Share a Word** / **Speak with me**
 - One Supabase table `recados` for all messages
 - `post_slug IS NULL` → general message (from `mural.html`)
 - `post_slug = '{slug}'` → message on that post; also shown on Guestbook with post label
@@ -97,6 +97,7 @@ When adding UI text, update **both** locale files.
 | Sync Supabase to site | `./scripts/sync-mural-config.sh` |
 | Post-slug migration | `./scripts/run-supabase-migration.sh` |
 | Guestbook / mural setup | [docs/MURAL-SETUP.md](docs/MURAL-SETUP.md) |
+| Prevent free-tier pause | [docs/SUPABASE.md](docs/SUPABASE.md) — cron-job.org keep-alive |
 
 ## Code style (this repo)
 

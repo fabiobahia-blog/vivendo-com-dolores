@@ -2,7 +2,7 @@
   "use strict";
 
   var STORAGE_KEY = "blog_lang";
-  var LOCALE_VERSION = "2";
+  var LOCALE_VERSION = "5";
   var DEFAULT_LANG = "pt-BR";
   var SUPPORTED = ["pt-BR", "en-US"];
 

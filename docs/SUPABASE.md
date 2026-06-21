@@ -124,10 +124,56 @@ curl -s "https://gduyitvnnyuewwbebeyq.supabase.co/rest/v1/recados?select=post_sl
 
 SQL completo de criação: [MURAL-SETUP.md](MURAL-SETUP.md).
 
+## Evitar pausa por inatividade (free tier)
+
+Projetos gratuitos pausam após ~**7 dias sem** chamadas à API REST, queries ou Edge Functions. Blog com pouco tráfego pode pausar mesmo com o GitHub Pages no ar.
+
+**Solução deste projeto:** [cron-job.org](https://cron-job.org) — ping externo semanal na REST API (não use `pg_cron` dentro do Supabase; quando o projeto pausa, cron interno para também).
+
+### Configurar no cron-job.org
+
+1. Crie conta em https://cron-job.org e confirme o e-mail.
+2. **Cronjobs** → **Create cronjob**.
+3. Preencha:
+
+| Campo | Valor |
+|-------|--------|
+| **Title** | `vivendo-supabase-keepalive` |
+| **URL** | `https://gduyitvnnyuewwbebeyq.supabase.co/rest/v1/recados?select=id&limit=1` |
+| **Schedule** | Duas vezes por semana (ex.: **Monday** e **Thursday**, 12:00 UTC) — ou a cada 3 dias |
+| **Request method** | `GET` |
+| **Enabled** | Sim |
+
+4. Em **Advanced** → **Headers**, adicione (valores do `.env` ou `mural.config.js`):
+
+| Header | Valor |
+|--------|--------|
+| `apikey` | `MURAL_SUPABASE_ANON_KEY` (publishable key) |
+| `Authorization` | `Bearer ` + mesma publishable key |
+
+5. **Create**. O job deve retornar **HTTP 200** e corpo JSON (`[]` ou um registro).
+
+### Testar manualmente
+
+```bash
+source .env
+curl -sf "https://gduyitvnnyuewwbebeyq.supabase.co/rest/v1/recados?select=id&limit=1" \
+  -H "apikey: $MURAL_SUPABASE_ANON_KEY" \
+  -H "Authorization: Bearer $MURAL_SUPABASE_ANON_KEY"
+```
+
+- Sucesso: exit code 0 e JSON
+- Projeto pausado: DNS falha ou timeout — restaure no dashboard antes de confiar no cron
+
+### Alternativa
+
+Upgrade para **Pro** (~US$ 25/mês) remove a pausa por inatividade.
+
 ## Troubleshooting
 
 | Problema | Solução |
 |----------|---------|
+| Projeto pausado / API offline | Dashboard → **Restore**; depois configure keep-alive acima |
 | `could not translate host name db.*` | Usar pooler `aws-1-sa-east-1.pooler.supabase.com`, não o host `db.*` |
 | `tenant/user postgres.* not found` | Região ou prefixo pooler errado — este projeto usa `aws-1-sa-east-1` |
 | Formulário desabilitado no site | Rodar `sync-mural-config.sh`; conferir publishable key no Supabase |
