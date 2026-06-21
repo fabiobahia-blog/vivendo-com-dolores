@@ -7,7 +7,7 @@
     "home": "Início",
     "about": "Sobre mim",
     "mural": "Deixar um Recado",
-    "contact": "Contato",
+    "contact": "Falar Comigo",
     "lessons": "Lições aprendidas"
   },
   "lang": {
@@ -31,7 +31,7 @@
   "titles": {
     "index": "Vivendo Entre Dolores",
     "about": "Sobre mim | Vivendo Entre Dolores",
-    "contact": "Entre em contato | Vivendo Entre Dolores",
+    "contact": "Falar Comigo | Vivendo Entre Dolores",
     "mural": "Deixar um Recado | Vivendo Entre Dolores",
     "lessons": "Lições aprendidas | Vivendo Entre Dolores",
     "postComoTudoComecou": "Como tudo começou | Vivendo Entre Dolores",
@@ -81,7 +81,7 @@
     }
   },
   "contact": {
-    "heading": "Entre em contato",
+    "heading": "Falar Comigo",
     "note": "Preencha o formulário abaixo. Ao enviar, o seu aplicativo de email vai abrir com a mensagem pronta.",
     "name": "Nome",
     "email": "Email",

@@ -6,8 +6,8 @@
   "nav": {
     "home": "Home",
     "about": "About me",
-    "mural": "Guestbook",
-    "contact": "Contact",
+    "mural": "Share a Word",
+    "contact": "Speak with me",
     "lessons": "Lessons learned"
   },
   "lang": {
@@ -19,20 +19,20 @@
     "index": "Built simply to share a real journey.",
     "about": "Thank you for visiting and following this journey.",
     "contact": "Your message matters to me.",
-    "mural": "Every message in the guestbook makes a difference.",
+    "mural": "Every message shared here makes a difference.",
     "post": "Sharing is also a form of care.",
     "lessons": "Each lesson is a piece of this journey."
   },
   "meta": {
     "indexDesc": "Personal stories about living with chronic pain and porto-mesenteric thrombosis.",
-    "muralDesc": "Leave a supportive message in the guestbook and read notes from others.",
+    "muralDesc": "Leave a supportive message and read notes from others.",
     "lessonsDesc": "Practical lessons from living with porto-mesenteric thrombosis and chronic pain."
   },
   "titles": {
     "index": "Living Between Pains",
     "about": "About me | Living Between Pains",
-    "contact": "Contact | Living Between Pains",
-    "mural": "Guestbook | Living Between Pains",
+    "contact": "Speak with me | Living Between Pains",
+    "mural": "Share a Word | Living Between Pains",
     "lessons": "Lessons learned | Living Between Pains",
     "postComoTudoComecou": "How it all began | Living Between Pains",
     "postDescobriTrombose": "The day I discovered the thrombosis | Living Between Pains"
@@ -81,7 +81,7 @@
     }
   },
   "contact": {
-    "heading": "Contact me",
+    "heading": "Speak with me",
     "note": "Fill out the form below. When you submit, your email app will open with the message ready.",
     "name": "Name",
     "email": "Email",
@@ -96,15 +96,15 @@
     "feedbackOk": "Opening your email app to finish sending."
   },
   "mural": {
-    "heading": "Guestbook",
+    "heading": "Share a Word",
     "note": "This space is for support, kindness, and sharing experiences.",
-    "setup": "The guestbook is being set up. You will be able to post messages here soon.",
+    "setup": "Share a Word is being set up. You will be able to post messages here soon.",
     "name": "Name",
     "message": "Message",
     "submit": "Post message",
     "recent": "Recent messages",
     "empty": "Be the first to leave a message.",
-    "configuring": "Guestbook is being configured. Coming soon.",
+    "configuring": "Share a Word is being configured. Coming soon.",
     "sending": "Sending...",
     "published": "Message posted. Thank you!",
     "errorSend": "Could not send. Please try again.",
@@ -114,10 +114,10 @@
   },
   "postMessages": {
     "heading": "Leave a message",
-    "note": "Leave a supportive note about this post. It also appears on the Guestbook.",
+    "note": "Leave a supportive note about this post. It also appears on Share a Word.",
     "recent": "Messages on this post",
     "empty": "Be the first to leave a message on this post.",
-    "seeAll": "See all messages on the Guestbook",
+    "seeAll": "See all messages on Share a Word",
     "onPost": "On: {title}",
     "toBlog": "To the blog"
   },
