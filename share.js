@@ -2,7 +2,6 @@
   "use strict";
 
   const shareSection = document.querySelector("[data-share-section]");
-
   if (!shareSection) return;
 
   function t(key, params) {
@@ -34,46 +33,30 @@
     return getShareUrl();
   }
 
-  function getSocialCaption(platform) {
-    const slug = getPostSlug();
-    if (!slug) return null;
-    const key = "posts." + slug + ".social." + platform;
-    const value = t(key, { url: getShareUrl() });
-    return value !== key ? value : null;
-  }
-
   function buildShareHref(platform) {
     const shareUrl = getShareUrl();
     const cardUrl = getCardShareUrl();
     const pageUrl = encodeURIComponent(
       platform === "facebook" || platform === "linkedin" ? cardUrl : shareUrl
     );
-    const caption = getSocialCaption(platform);
     const fallbackText = t("share.shareText", { title: document.title }) + " " + shareUrl;
 
     switch (platform) {
       case "whatsapp":
-        return "https://wa.me/?text=" + encodeURIComponent(caption || fallbackText);
+        return "https://wa.me/?text=" + encodeURIComponent(fallbackText);
       case "x":
-        return "https://twitter.com/intent/tweet?text=" + encodeURIComponent(caption || fallbackText);
-      case "facebook": {
-        var href = "https://www.facebook.com/sharer/sharer.php?u=" + pageUrl;
-        if (caption) {
-          href += "&quote=" + encodeURIComponent(caption);
-        }
-        return href;
-      }
+        return "https://twitter.com/intent/tweet?text=" + encodeURIComponent(fallbackText);
+      case "facebook":
+        return "https://www.facebook.com/sharer/sharer.php?u=" + pageUrl;
       case "linkedin":
         return "https://www.linkedin.com/sharing/share-offsite/?url=" + pageUrl;
-      case "email": {
-        const body = caption || fallbackText;
+      case "email":
         return (
           "mailto:?subject=" +
           encodeURIComponent(document.title) +
           "&body=" +
-          encodeURIComponent(body)
+          encodeURIComponent(fallbackText)
         );
-      }
       default:
         return "#";
     }
