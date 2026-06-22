@@ -25,6 +25,11 @@ if [ -d "$LINK_DIR" ]; then
   exit 1
 fi
 
+if [ ! -f "$ROOT_DIR/$POST_SLUG/index.html" ]; then
+  echo "Erro: post não encontrado em $POST_SLUG/index.html"
+  exit 1
+fi
+
 TARGET_REL="../../$POST_SLUG/"
 TARGET_ABS="$SITE_ORIGIN/$POST_SLUG/"
 SHORT_URL="$SITE_ORIGIN/l/$CODE/"
@@ -39,17 +44,32 @@ CODE="$CODE" TITLE="$TITLE" EXCERPT="$EXCERPT" TARGET_REL="$TARGET_REL" TARGET_A
   's/\{\{LINK_TITLE\}\}/$ENV{TITLE}/g; s/\{\{LINK_EXCERPT\}\}/$ENV{EXCERPT}/g; s/\{\{TARGET_REL\}\}/$ENV{TARGET_REL}/g; s/\{\{TARGET_ABS\}\}/$ENV{TARGET_ABS}/g; s/\{\{SHORT_URL\}\}/$ENV{SHORT_URL}/g' \
   "$CARD_TEMPLATE" > "$CARD_DIR/index.html"
 
-echo ""
-echo "Adicione em links.config.js:"
-echo ""
-cat <<EOF
+TITLE_JS=$(printf '%s' "$TITLE" | perl -pe 's/\\/\\\\/g; s/"/\\"/g')
+EXCERPT_JS=$(printf '%s' "$EXCERPT" | perl -pe 's/\\/\\\\/g; s/"/\\"/g')
+
+if grep -q "    $CODE:" "$LINKS_CONFIG"; then
+  echo "Aviso: entrada '$CODE' já existe em links.config.js — pulando atualização."
+else
+  ENTRY=$(cat <<EOF
+
     $CODE: {
       postSlug: "$POST_SLUG",
-      title: "$TITLE",
-      excerpt: "$EXCERPT",
+      title: "$TITLE_JS",
+      excerpt:
+        "$EXCERPT_JS",
     },
 EOF
+)
+  export ENTRY
+  perl -0777 -i -pe 's/\n  \},\n  getByPostSlug: function/$ENV{ENTRY}\n  },\n  getByPostSlug: function/s' "$LINKS_CONFIG"
+  echo "Entrada adicionada em links.config.js"
+fi
+
 echo ""
 echo "Link curto: $SHORT_URL"
 echo "Cartão clicável: ${SHORT_URL}card/"
 echo "Redirect criado em: l/$CODE/"
+echo ""
+echo "Próximos passos:"
+echo "  1. Adicione legendas em docs/social-captions.json → posts.$POST_SLUG"
+echo "  2. Siga docs/DIVULGACAO-REDES.md para publicar nas redes"

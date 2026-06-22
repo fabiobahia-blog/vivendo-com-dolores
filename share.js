@@ -26,6 +26,15 @@
     return window.location.href.split("#")[0];
   }
 
+  function getCardShareUrl() {
+    const postSlug = getPostSlug();
+    if (window.BlogLinks && postSlug) {
+      const link = BlogLinks.getByPostSlug(postSlug);
+      if (link) return BlogLinks.getCardUrl(link.code);
+    }
+    return getShareUrl();
+  }
+
   function getSocialCaption(platform) {
     const slug = getPostSlug();
     if (!slug) return null;
@@ -34,10 +43,41 @@
     return value !== key ? value : null;
   }
 
-  function getShareText() {
-    const whatsappCaption = getSocialCaption("whatsapp");
-    if (whatsappCaption) return whatsappCaption;
-    return t("share.shareText", { title: document.title });
+  function buildShareHref(platform) {
+    const shareUrl = getShareUrl();
+    const cardUrl = getCardShareUrl();
+    const pageUrl = encodeURIComponent(
+      platform === "facebook" || platform === "linkedin" ? cardUrl : shareUrl
+    );
+    const caption = getSocialCaption(platform);
+    const fallbackText = t("share.shareText", { title: document.title }) + " " + shareUrl;
+
+    switch (platform) {
+      case "whatsapp":
+        return "https://wa.me/?text=" + encodeURIComponent(caption || fallbackText);
+      case "x":
+        return "https://twitter.com/intent/tweet?text=" + encodeURIComponent(caption || fallbackText);
+      case "facebook": {
+        var href = "https://www.facebook.com/sharer/sharer.php?u=" + pageUrl;
+        if (caption) {
+          href += "&quote=" + encodeURIComponent(caption);
+        }
+        return href;
+      }
+      case "linkedin":
+        return "https://www.linkedin.com/sharing/share-offsite/?url=" + pageUrl;
+      case "email": {
+        const body = caption || fallbackText;
+        return (
+          "mailto:?subject=" +
+          encodeURIComponent(document.title) +
+          "&body=" +
+          encodeURIComponent(body)
+        );
+      }
+      default:
+        return "#";
+    }
   }
 
   function copyText(value, feedbackEl, successMessage) {
@@ -79,27 +119,11 @@
   function updateShareLinks() {
     if (!shareSection) return;
 
-    const shareUrl = getShareUrl();
-    const pageUrl = encodeURIComponent(shareUrl);
-    const pageTitle = encodeURIComponent(document.title);
-    const shareText = getShareText();
-    const text = encodeURIComponent(shareText);
-    const whatsappCaption = getSocialCaption("whatsapp");
-    const whatsappHref = whatsappCaption
-      ? "https://wa.me/?text=" + text
-      : "https://wa.me/?text=" + text + "%20" + pageUrl;
+    const platforms = ["whatsapp", "x", "facebook", "linkedin", "email"];
 
-    const links = {
-      whatsapp: whatsappHref,
-      x: "https://twitter.com/intent/tweet?text=" + text + "&url=" + pageUrl,
-      facebook: "https://www.facebook.com/sharer/sharer.php?u=" + pageUrl,
-      linkedin: "https://www.linkedin.com/sharing/share-offsite/?url=" + pageUrl,
-      email: "mailto:?subject=" + pageTitle + "&body=" + text + "%0A%0A" + pageUrl,
-    };
-
-    Object.entries(links).forEach(function ([key, href]) {
-      const anchor = shareSection.querySelector('[data-share="' + key + '"]');
-      if (anchor) anchor.href = href;
+    platforms.forEach(function (platform) {
+      const anchor = shareSection.querySelector('[data-share="' + platform + '"]');
+      if (anchor) anchor.href = buildShareHref(platform);
     });
 
     const shortDisplay = shareSection.querySelector("[data-share-short-url]");
@@ -111,6 +135,12 @@
         });
         shortDisplay.hidden = false;
       }
+    }
+
+    const instagramImageLink = shareSection.querySelector("[data-share-instagram-image]");
+    if (instagramImageLink && getPostSlug()) {
+      instagramImageLink.href =
+        "../contato.html?post=" + encodeURIComponent(getPostSlug()) + "#share-card";
     }
   }
 
