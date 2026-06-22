@@ -136,6 +136,19 @@
     "sad": "Sad",
     "angry": "Angry"
   },
+  "share": {
+    "title": "Share this post",
+    "whatsapp": "WhatsApp",
+    "x": "X/Twitter",
+    "facebook": "Facebook",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "email": "Email",
+    "copy": "Copy link",
+    "copyOk": "Link copied!",
+    "instagramOk": "Link copied! Paste on Instagram (Stories, DM, or bio).",
+    "shareText": "Read this post: {title}"
+  },
   "posts": {
     "como-tudo-comecou": {
       "title": "How it all began",

@@ -2,9 +2,8 @@
   "use strict";
 
   const shareSection = document.querySelector("[data-share-section]");
-  const captionsSection = document.querySelector("[data-social-captions]");
 
-  if (!shareSection && !captionsSection) return;
+  if (!shareSection) return;
 
   function t(key, params) {
     if (window.BlogI18n && window.BlogI18n.t) {
@@ -117,90 +116,32 @@
   }
 
   function updateShareLinks() {
-    if (!shareSection) return;
-
     const platforms = ["whatsapp", "x", "facebook", "linkedin", "email"];
 
     platforms.forEach(function (platform) {
       const anchor = shareSection.querySelector('[data-share="' + platform + '"]');
       if (anchor) anchor.href = buildShareHref(platform);
     });
-
-    const shortDisplay = shareSection.querySelector("[data-share-short-url]");
-    if (shortDisplay && window.BlogLinks && getPostSlug()) {
-      const link = BlogLinks.getByPostSlug(getPostSlug());
-      if (link) {
-        shortDisplay.textContent = t("share.usingShortLink", {
-          url: BlogLinks.getShortUrl(link.code),
-        });
-        shortDisplay.hidden = false;
-      }
-    }
-
-    const instagramImageLink = shareSection.querySelector("[data-share-instagram-image]");
-    if (instagramImageLink && getPostSlug()) {
-      instagramImageLink.href =
-        "../contato.html?post=" + encodeURIComponent(getPostSlug()) + "#share-card";
-    }
-  }
-
-  function initSocialCaptions() {
-    if (!captionsSection) return;
-
-    const platforms = ["whatsapp", "facebook", "instagram", "linkedin"];
-    const hasAny = platforms.some(function (platform) {
-      return getSocialCaption(platform);
-    });
-
-    captionsSection.hidden = !hasAny;
-    if (!hasAny) return;
-
-    const feedback = captionsSection.querySelector("[data-social-captions-feedback]");
-
-    platforms.forEach(function (platform) {
-      const btn = captionsSection.querySelector('[data-social-copy="' + platform + '"]');
-      if (!btn) return;
-      if (!getSocialCaption(platform)) {
-        btn.hidden = true;
-        return;
-      }
-      btn.hidden = false;
-      btn.onclick = function (event) {
-        copyText(getSocialCaption(platform), feedback, t("share.socialCopyOk"));
-        event.currentTarget.blur();
-      };
-    });
   }
 
   updateShareLinks();
-  initSocialCaptions();
-  document.addEventListener("bloglangchange", function () {
-    updateShareLinks();
-    initSocialCaptions();
-  });
+  document.addEventListener("bloglangchange", updateShareLinks);
 
-  if (shareSection) {
-    const copyFeedback = shareSection.querySelector("[data-copy-feedback]");
+  const copyFeedback = shareSection.querySelector("[data-copy-feedback]");
 
-    const copyBtn = shareSection.querySelector('[data-share="copy"]');
-    if (copyBtn) {
-      copyBtn.addEventListener("click", function (event) {
-        copyText(getShareUrl(), copyFeedback, t("share.copyOk"));
-        event.currentTarget.blur();
-      });
-    }
+  const copyBtn = shareSection.querySelector('[data-share="copy"]');
+  if (copyBtn) {
+    copyBtn.addEventListener("click", function (event) {
+      copyText(getShareUrl(), copyFeedback, t("share.copyOk"));
+      event.currentTarget.blur();
+    });
+  }
 
-    const instagramBtn = shareSection.querySelector('[data-share="instagram"]');
-    if (instagramBtn) {
-      instagramBtn.addEventListener("click", function (event) {
-        const caption = getSocialCaption("instagram");
-        if (caption) {
-          copyText(caption, copyFeedback, t("share.instagramOk"));
-        } else {
-          copyText(getShareUrl(), copyFeedback, t("share.instagramOk"));
-        }
-        event.currentTarget.blur();
-      });
-    }
+  const instagramBtn = shareSection.querySelector('[data-share="instagram"]');
+  if (instagramBtn) {
+    instagramBtn.addEventListener("click", function (event) {
+      copyText(getShareUrl(), copyFeedback, t("share.instagramOk"));
+      event.currentTarget.blur();
+    });
   }
 })();
