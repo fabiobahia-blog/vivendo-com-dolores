@@ -230,6 +230,15 @@
       pick.appendChild(option);
     });
 
+    var params = new URLSearchParams(window.location.search);
+    var postParam = params.get("post");
+    if (postParam) {
+      var matched = BlogLinks.getByPostSlug(postParam);
+      if (matched) {
+        pick.value = matched.code;
+      }
+    }
+
     var refreshHub = initShareCard(hub, function () {
       var code = pick.value;
       if (!code || !BlogLinks.entries[code]) return null;
@@ -239,6 +248,13 @@
     pick.addEventListener("change", function () {
       if (refreshHub) refreshHub();
     });
+
+    if (window.location.hash === "#share-card") {
+      var target = document.getElementById("share-card") || hub;
+      if (target && target.scrollIntoView) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
     return;
   }
 

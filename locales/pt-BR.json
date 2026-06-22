@@ -136,37 +136,6 @@
     "sad": "Triste",
     "angry": "Grr"
   },
-  "share": {
-    "title": "Compartilhar este post",
-    "whatsapp": "WhatsApp",
-    "x": "X/Twitter",
-    "facebook": "Facebook",
-    "linkedin": "LinkedIn",
-    "instagram": "Instagram",
-    "email": "Email",
-    "copy": "Copiar link",
-    "copyOk": "Link copiado!",
-    "instagramOk": "Link copiado! Cole no Instagram (Stories, DM ou bio).",
-    "shareText": "Leia este post: {title}",
-    "usingShortLink": "Link curto: {url}",
-    "socialCaptionsTitle": "Textos para redes sociais",
-    "socialCopyOk": "Legenda copiada!",
-    "socialCopyWhatsapp": "Copiar legenda (WhatsApp)",
-    "socialCopyFacebook": "Copiar legenda (Facebook)",
-    "socialCopyInstagram": "Copiar legenda (Instagram)",
-    "socialCopyLinkedin": "Copiar legenda (LinkedIn)"
-  },
-  "shareCard": {
-    "title": "Imagem para redes sociais",
-    "pickPost": "Escolha o post",
-    "note": "No Instagram, publique a imagem e use o link curto na legenda. O QR code leva direto ao post.",
-    "download": "Baixar imagem",
-    "openCard": "Cartão clicável (WhatsApp)",
-    "copyShort": "Copiar link curto",
-    "downloadOk": "Imagem baixada!",
-    "copyShortOk": "Link curto copiado!",
-    "scanOrTap": "Escaneie o QR ou acesse:"
-  },
   "posts": {
     "como-tudo-comecou": {
       "title": "Como tudo começou",
@@ -193,13 +162,7 @@
       "p1": "A chegada no hospital foi tranquila, me sentia anestesiado, uma calma antes da tempestade.",
       "p2": "Fui admitido e prontamente levado para um quarto, neste ambiente os médicos já me aguardavam e desejavam me ver.",
       "p3": "Ali começou a montanha-russa de emoções e testes, sim, pois foram diversas especialidades a me visitar, o cirurgião gástrico para saber se precisava de cirurgia, o hematologista para entender se era uma doença no sangue, o vascular especialista no sistema circulatório, o hepatologista que cuida do fígado querendo saber se era câncer, a equipe de nutrição para orientar a dieta, os enfermeiros com os cuidados do dia a dia… ufa…",
-      "p4": "A quantidade de informação que eu precisava absorver era muito grande, minha companheira estava ao meu lado, Isabela, soube muito tempo depois que as conversas com os médicos eram \"tem risco de morte\", porém tudo era sempre tratado com muita leveza na minha frente e eu sempre mantive uma fé inabalável que tudo daria certo.",
-      "social": {
-        "whatsapp": "Cheguei ao hospital numa calma estranha — quase anestesiado. Depois vieram cirurgião, hematologista, vascular, hepatologista, nutrição… Isabela ao meu lado o tempo todo. Contei esse capítulo no blog:\n\n{url}",
-        "facebook": "A chegada no hospital parecia tranquila — uma calma antes da tempestade. No quarto, especialistas de áreas diferentes se revezavam: cirurgia, sangue, circulação, fígado, nutrição… Isabela estava comigo enquanto eu mantinha a fé de que tudo daria certo. Novo relato no blog Vivendo Entre Dolores:\n\n{url}",
-        "instagram": "Calma antes da tempestade no hospital. Especialistas, exames e Isabela ao meu lado — e fé. Leia o relato completo:\n\n{url}\n\n#VivendoEntreDolores #Saúde #JornadaDeCuidado",
-        "linkedin": "Chegar ao hospital numa calma quase anestesiada e, minutos depois, entrar numa montanha-russa de especialistas e exames — isso muda a forma como a gente enxerga o tempo e a informação. Isabela estava ao meu lado; eu mantinha a fé. Registrei esse capítulo no blog:\n\n{url}"
-      }
+      "p4": "A quantidade de informação que eu precisava absorver era muito grande, minha companheira estava ao meu lado, Isabela, soube muito tempo depois que as conversas com os médicos eram \"tem risco de morte\", porém tudo era sempre tratado com muita leveza na minha frente e eu sempre mantive uma fé inabalável que tudo daria certo."
     }
   }
 }

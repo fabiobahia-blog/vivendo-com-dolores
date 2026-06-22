@@ -25,7 +25,8 @@ Browser (GitHub Pages)
   ├── lang.js + locales/*.json     → i18n (PT / EN)
   ├── mural.js + mural.config.js   → Guestbook + post messages (Supabase recados)
   ├── reactions.js                 → Post emoji reactions (Supabase post_reactions)
-  ├── share.js + share-card.js     → Social share + short links
+  ├── reactions.js                 → Post emoji reactions (Supabase post_reactions)
+  ├── share.js + share-card.js     → Social captions/short links (not shown on site; use via chat)
   └── links.config.js              → Short URL map (/l/{code}/)
 ```
 
@@ -49,6 +50,7 @@ Browser (GitHub Pages)
 - `l/{code}/` → redirect to post (`templates/short-link-redirect.html`)
 - `l/{code}/card/` → WhatsApp/social card (`templates/short-link-card.html`)
 - Config: `links.config.js` — add entries via `scripts/new-short-link.sh`
+- Playbook: [docs/DIVULGACAO-REDES.md](docs/DIVULGACAO-REDES.md)
 
 ## Supabase (admin)
 

@@ -136,37 +136,6 @@
     "sad": "Sad",
     "angry": "Angry"
   },
-  "share": {
-    "title": "Share this post",
-    "whatsapp": "WhatsApp",
-    "x": "X/Twitter",
-    "facebook": "Facebook",
-    "linkedin": "LinkedIn",
-    "instagram": "Instagram",
-    "email": "Email",
-    "copy": "Copy link",
-    "copyOk": "Link copied!",
-    "instagramOk": "Link copied! Paste on Instagram (Stories, DM, or bio).",
-    "shareText": "Read this post: {title}",
-    "usingShortLink": "Short link: {url}",
-    "socialCaptionsTitle": "Captions for social media",
-    "socialCopyOk": "Caption copied!",
-    "socialCopyWhatsapp": "Copy caption (WhatsApp)",
-    "socialCopyFacebook": "Copy caption (Facebook)",
-    "socialCopyInstagram": "Copy caption (Instagram)",
-    "socialCopyLinkedin": "Copy caption (LinkedIn)"
-  },
-  "shareCard": {
-    "title": "Image for social media",
-    "pickPost": "Choose a post",
-    "note": "On Instagram, publish the image and use the short link in the caption. The QR code goes straight to the post.",
-    "download": "Download image",
-    "openCard": "Clickable card (WhatsApp)",
-    "copyShort": "Copy short link",
-    "downloadOk": "Image downloaded!",
-    "copyShortOk": "Short link copied!",
-    "scanOrTap": "Scan the QR or visit:"
-  },
   "posts": {
     "como-tudo-comecou": {
       "title": "How it all began",
@@ -193,13 +162,7 @@
       "p1": "Arriving at the hospital was calm; I felt numb, a calm before the storm.",
       "p2": "I was admitted and promptly taken to a room. In that setting, the doctors were already waiting for me and wanted to see me.",
       "p3": "That was when the roller coaster of emotions and tests began — yes, because many specialties came to see me: the gastric surgeon to find out if I needed surgery, the hematologist to understand if it was a blood disease, the vascular specialist in the circulatory system, the hepatologist who cares for the liver wanting to know if it was cancer, the nutrition team to guide my diet, the nurses with day-to-day care… phew…",
-      "p4": "The amount of information I needed to take in was very large; my partner was by my side, Isabela. I learned much later that the conversations with the doctors were \"there is a risk of death\", yet everything was always handled with great lightness in front of me and I always kept an unshakeable faith that everything would work out.",
-      "social": {
-        "whatsapp": "I arrived at the hospital in a strange calm — almost numb. Then came the surgeon, hematologist, vascular specialist, hepatologist, nutrition team… Isabela by my side the whole time. I wrote about this chapter on the blog:\n\n{url}",
-        "facebook": "Arriving at the hospital felt quiet — a calm before the storm. In the room, specialists kept rotating: surgery, blood, circulation, liver, nutrition… Isabela was with me while I held on to faith that things would work out. New post on Living Between Pains:\n\n{url}",
-        "instagram": "A calm before the storm at the hospital. Specialists, tests, and Isabela by my side — and faith. Read the full story:\n\n{url}\n\n#LivingBetweenPains #Health #CareJourney",
-        "linkedin": "Arriving at the hospital almost numb, then stepping into a roller coaster of specialists and tests — it changes how you process time and information. Isabela was with me; I held on to faith. I wrote about this chapter on the blog:\n\n{url}"
-      }
+      "p4": "The amount of information I needed to take in was very large; my partner was by my side, Isabela. I learned much later that the conversations with the doctors were \"there is a risk of death\", yet everything was always handled with great lightness in front of me and I always kept an unshakeable faith that everything would work out."
     }
   }
 }

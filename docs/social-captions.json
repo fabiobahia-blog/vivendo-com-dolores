@@ -1,0 +1,54 @@
+{
+  "siteOrigin": "https://fabiobahia-blog.github.io/vivendo-com-dolores",
+  "note": "Legendas internas para divulgação via chat. Não são publicadas no site. Substitua {url} pelo link curto do post.",
+  "posts": {
+    "como-tudo-comecou": {
+      "shortCode": "comeco",
+      "title": "Como tudo começou",
+      "pt-BR": {
+        "whatsapp": "📖 *Como tudo começou*\n\nO primeiro texto do blog — sobre viver com dor crônica e trombose porto-mesentérica, com honestidade. Se você passa por algo parecido, talvez ajude a sentir que não está sozinho.\n\n👉 {url}",
+        "facebook": "Como tudo começou\n\nCriei este blog para registrar minha vivência com dor crônica e trombose porto-mesentérica — os dias bons, os difíceis, os medos e as pequenas vitórias.\n\nSe você ou alguém que ama vive desafios de saúde, espero que este espaço acolha.\n\n🔗 {url}\n\n#VivendoEntreDolores #Saúde #DorCrônica",
+        "instagram": "Como tudo começou 📖\n\nO primeiro relato do blog — dor crônica, trombose e a decisão de contar essa jornada com verdade.\n\n🔗 {url}\n\n#VivendoEntreDolores #Saúde #JornadaDeCuidado #DorCrônica",
+        "linkedin": "Como tudo começou\n\nViver com dor crônica e trombose porto-mesentérica mudou minha rotina e minha forma de enxergar o tempo. Abri este blog para contar essa jornada com honestidade — e, se possível, ajudar quem enfrenta desafios parecidos a se sentir menos sozinho.\n\nLeia o primeiro post:\n{url}"
+      },
+      "en-US": {
+        "whatsapp": "📖 *How it all began*\n\nThe blog's first post — about living with chronic pain and porto-mesenteric thrombosis, told honestly. If you're going through something similar, I hope it helps you feel less alone.\n\n👉 {url}",
+        "facebook": "How it all began\n\nI started this blog to document my experience with chronic pain and porto-mesenteric thrombosis — good days, hard days, fears, and small victories.\n\nIf you or someone you love faces health challenges, I hope this space offers comfort.\n\n🔗 {url}\n\n#LivingBetweenPains #Health #ChronicPain",
+        "instagram": "How it all began 📖\n\nThe first story on the blog — chronic pain, thrombosis, and choosing to tell this journey truthfully.\n\n🔗 {url}\n\n#LivingBetweenPains #Health #CareJourney #ChronicPain",
+        "linkedin": "How it all began\n\nLiving with chronic pain and porto-mesenteric thrombosis changed my routine and how I see time. I opened this blog to tell that journey honestly — and, if possible, help others facing similar challenges feel less alone.\n\nRead the first post:\n{url}"
+      }
+    },
+    "o-dia-em-que-descobri-a-trombose": {
+      "shortCode": "trombose",
+      "title": "O dia em que descobri a trombose",
+      "pt-BR": {
+        "whatsapp": "📖 *O dia em que descobri a trombose*\n\nEu levava uma vida normal — exercícios, alimentação equilibrada, sem dor. Depois de uma cirurgia, tudo mudou com uma ligação do médico que eu nunca vou esquecer.\n\nContei como foi esse dia: a calma diante da família, o medo, a corrida ao hospital e a oração no caminho.\n\n👉 {url}",
+        "facebook": "O dia em que descobri a trombose\n\nEu levava uma vida normal: exercícios, alimentação equilibrada, sem dor. Depois de uma cirurgia de hérnia, comecei a sentir dor abdominal intensa, febre todas as noites e dificuldade para me alimentar.\n\nEstava deitado, em um dia comum de trabalho, quando meu médico ligou. A frase que ouvi mudou tudo — e na hora tentei ficar calmo para minha esposa e minha família.\n\nSe você ou alguém que você ama vive desafios de saúde, talvez este relato ajude a sentir que não está sozinho.\n\n🔗 {url}\n\n#Trombose #Saúde #VivendoEntreDolores",
+        "instagram": "O dia em que descobri a trombose 📖\n\nEstava deitado, em um dia normal de trabalho, quando meu médico ligou. Contei no blog como foi avisar minha família, ir a São Paulo e buscar força na fé.\n\n🔗 {url}\n\n#trombose #saúde #vivendoentredolores #jornadadesaúde #família",
+        "linkedin": "O dia em que descobri a trombose\n\nAntes disso, eu tinha uma rotina saudável. Após uma cirurgia de hérnia, surgiram sintomas que não podiam ser ignorados. A confirmação veio por telefone, no meio de um dia comum de trabalho.\n\nNaquele momento coexistiram a preocupação com a saúde e a necessidade de transmitir calma à minha família enquanto organizávamos tudo para ir a São Paulo.\n\nCompartilho este relato porque acredito que histórias reais podem acolher quem está passando por algo parecido.\n\n{url}"
+      },
+      "en-US": {
+        "whatsapp": "📖 *The day I discovered the thrombosis*\n\nI was living a normal life — exercise, balanced diet, no pain. After surgery, everything changed with a phone call from my doctor I'll never forget.\n\nI wrote about that day: staying calm for my family, the fear, the rush to the hospital, and prayer on the way.\n\n👉 {url}",
+        "facebook": "The day I discovered the thrombosis\n\nI was living a normal life: exercise, balanced eating, no pain. After hernia surgery, intense abdominal pain, nightly fever, and trouble eating began.\n\nI was lying down on an ordinary workday when my doctor called. The words I heard changed everything — and I tried to stay calm for my wife and family.\n\nIf you or someone you love faces health challenges, I hope this story helps you feel less alone.\n\n🔗 {url}\n\n#Thrombosis #Health #LivingBetweenPains",
+        "instagram": "The day I discovered the thrombosis 📖\n\nLying down on a normal workday when my doctor called. I wrote about telling my family, going to São Paulo, and finding strength in faith.\n\n🔗 {url}\n\n#thrombosis #health #livingbetweenpains #carejourney #family",
+        "linkedin": "The day I discovered the thrombosis\n\nBefore that, I had a healthy routine. After hernia surgery, symptoms appeared that could not be ignored. The confirmation came by phone, in the middle of an ordinary workday.\n\nIn that moment, worry about my health coexisted with the need to stay calm for my family while we organized everything to go to São Paulo.\n\nI share this story because I believe real experiences can comfort others going through something similar.\n\n{url}"
+      }
+    },
+    "chegando-no-hospital": {
+      "shortCode": "hospital",
+      "title": "Chegando no hospital",
+      "pt-BR": {
+        "whatsapp": "Cheguei ao hospital numa calma estranha — quase anestesiado. Depois vieram cirurgião, hematologista, vascular, hepatologista, nutrição… Isabela ao meu lado o tempo todo. Contei esse capítulo no blog:\n\n{url}",
+        "facebook": "A chegada no hospital parecia tranquila — uma calma antes da tempestade. No quarto, especialistas de áreas diferentes se revezavam: cirurgia, sangue, circulação, fígado, nutrição… Isabela estava comigo enquanto eu mantinha a fé de que tudo daria certo. Novo relato no blog Vivendo Entre Dolores:\n\n{url}",
+        "instagram": "Calma antes da tempestade no hospital. Especialistas, exames e Isabela ao meu lado — e fé. Leia o relato completo:\n\n{url}\n\n#VivendoEntreDolores #Saúde #JornadaDeCuidado",
+        "linkedin": "Chegar ao hospital numa calma quase anestesiada e, minutos depois, entrar numa montanha-russa de especialistas e exames — isso muda a forma como a gente enxerga o tempo e a informação. Isabela estava ao meu lado; eu mantinha a fé. Registrei esse capítulo no blog:\n\n{url}"
+      },
+      "en-US": {
+        "whatsapp": "I arrived at the hospital in a strange calm — almost numb. Then came the surgeon, hematologist, vascular specialist, hepatologist, nutrition team… Isabela by my side the whole time. I wrote about this chapter on the blog:\n\n{url}",
+        "facebook": "Arriving at the hospital felt quiet — a calm before the storm. In the room, specialists kept rotating: surgery, blood, circulation, liver, nutrition… Isabela was with me while I held on to faith that things would work out. New post on Living Between Pains:\n\n{url}",
+        "instagram": "A calm before the storm at the hospital. Specialists, tests, and Isabela by my side — and faith. Read the full story:\n\n{url}\n\n#LivingBetweenPains #Health #CareJourney",
+        "linkedin": "Arriving at the hospital almost numb, then stepping into a roller coaster of specialists and tests — it changes how you process time and information. Isabela was with me; I held on to faith. I wrote about this chapter on the blog:\n\n{url}"
+      }
+    }
+  }
+}
